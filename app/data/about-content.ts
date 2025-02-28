@@ -1,0 +1,170 @@
+export type Skill = {
+    name: string;
+    category: 'UX/UI & Prototyping' | 'Visual & Creative Design' | 'Interpersonal' | 'Education';
+};
+
+export type Language = {
+    name: string;
+    level: string;
+};
+
+export type Certification = {
+    name: string;
+    issuer: string;
+    date: string;
+    validUntil?: string;
+    logo: string;
+    url?: string;
+};
+
+export type Experience = {
+    title: string;
+    company: string;
+    companyUrl?: string;
+    location: string;
+    period: string;
+    description: string;
+    skills: string[];
+    logo: string;
+};
+
+export type Education = {
+    school: string;
+    degree: string;
+    period: string;
+    details: string[];
+    logo: string;
+};
+
+export const ABOUT_PAGE = {
+    skills: {
+        'UX/UI & Prototyping': [
+            'User-Centered Design',
+            'User Research',
+            'Information Architecture',
+            'Wireframing',
+            'Rapid Prototyping',
+            'Figma',
+            'InDesign',
+            'Storyboarding'
+        ],
+        'Visual & Creative Design': [
+            'Visual Design',
+            'Creative Expression',
+            'Photography',
+            'Floristry',
+            'Mixed Media Art'
+        ],
+        'Interpersonal': [
+            'Cross-Cultural Communication',
+            'Team Leadership',
+            'Public Speaking',
+            'Trauma-informed Care',
+            'Conflict Resolution'
+        ],
+        'Education': [
+            'Curriculum Development',
+            'Lesson Planning',
+            'Literacy Learning',
+            'English Language Learning',
+            'Student Assessment'
+        ]
+    },
+
+    languages: [
+        {
+            name: 'English',
+            level: 'Native'
+        },
+        {
+            name: 'Spanish',
+            level: 'Prof. Working Proficiency'
+        },
+        {
+            name: 'Japanese',
+            level: 'Elementary Proficiency'
+        }
+    ],
+
+    certifications: [
+        {
+            name: 'Google UX Design Professional Certificate',
+            issuer: 'Google',
+            date: '2024-2025',
+            logo: '/images/logos/google.png',
+            url: 'https://www.coursera.org/professional-certificates/google-ux-design'
+        },
+        {
+            name: 'First Aid/CPR/AED',
+            issuer: 'American Red Cross',
+            date: '2023',
+            validUntil: '2025',
+            logo: '/images/logos/red_cross.png',
+            url: 'https://www.redcross.org/take-a-class/first-aid'
+        },
+        {
+            name: 'Lifeguard Certification',
+            issuer: 'American Red Cross',
+            date: '2023',
+            validUntil: '2025',
+            logo: '/images/logos/red_cross.png'
+        }
+    ],
+
+    experience: [
+        {
+            title: 'International Language Educator',
+            company: 'NALCAP',
+            companyUrl: 'https://www.educacionyfp.gob.es/eeuu/convocatorias-programas/convocatorias-eeuu/nalcap.html',
+            location: 'Cadiz, Spain',
+            period: '09/2024-Present',
+            description: 'Teaching English language and cultural exchange in Spanish public schools.',
+            skills: ['Cross-Cultural Communication', 'Curriculum Development', 'English Language Learning'],
+            logo: '/images/logos/nalcap.jpeg'
+        },
+        {
+            title: 'Outdoor Program Instructor',
+            company: 'SNJ',
+            companyUrl: 'https://www.sierranevadajourneys.org/',
+            location: 'Sierra Nevada, California',
+            period: '03/2023 - 08/2023',
+            description: 'Led outdoor education programs focusing on environmental awareness and team building.',
+            skills: ['Leadership', 'Public Speaking', 'Environmental Education'],
+            logo: '/images/logos/snj.png'
+        },
+        {
+            title: 'Florist',
+            company: 'Market Blooms',
+            location: 'Philadelphia, Pennsylvania',
+            companyUrl: 'https://readingterminalmarket.org/merchant/market-blooms/',
+            period: '09/2022 - 03/2023',
+            description: 'Led outdoor education programs focusing on environmental awareness and team building.',
+            skills: ['Leadership', 'Public Speaking', 'Environmental Education'],
+            logo: '/images/logos/snj.png'
+        },
+        {
+            title: 'Visual Art Teacher',
+            company: 'PlayArts',
+            companyUrl: 'https://www.playartsphilly.com/',
+            location: 'Philadelphia, Pennsylvania',
+            period: '09/2022 - 03/2023',
+            description: 'Developed and taught art curriculum for young learners.',
+            skills: ['Creative Expression', 'Curriculum Development', 'Visual Design'],
+            logo: '/images/logos/play_arts.jpg'
+        }
+    ],
+
+    education: [
+        {
+            school: 'Vassar College',
+            degree: 'Bachelor of Arts',
+            period: '2019-2023',
+            details: [
+                "Dean's List 2019-2023",
+                'Major in International Studies, Minor in Education and Hispanic Studies',
+                'Senior Thesis: "Cross-Cultural Education in Modern Society"'
+            ],
+            logo: '/images/logos/vassar.png'
+        }
+    ]
+}; 
