@@ -157,8 +157,8 @@ export default function Art() {
                             onClick={() => handleMenuClick(section.id)}
                             className={`block w-full text-left p-2 rounded-md transition-colors 
                 ${activeSection === section.id
-                                        ? 'bg-gray-200 font-semibold'
-                                        : 'hover:bg-gray-100'
+                                        ? 'bg-[#D8E1C3] font-semibold'
+                                        : 'hover:bg-[#F2F5EA]'
                                     }`}
                         >
                             {section.title}
