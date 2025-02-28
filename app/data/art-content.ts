@@ -84,6 +84,12 @@ export const ART_PAGE = {
             caption: "-",
             slug: "birthday"
         },
+        {
+            path: "/images/art/hope.jpeg",
+            title: "HOPE",
+            caption: "-",
+            slug: "hope"
+        },
         
     ],
     bw_film_photography: [
