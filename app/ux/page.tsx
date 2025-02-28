@@ -1,4 +1,3 @@
-import { UX_PAGE } from '../data/ux-content';
 import Image from 'next/image';
 import Link from 'next/link';
 

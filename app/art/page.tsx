@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
 import { ART_PAGE, ArtItem } from '../data/art-content';
 import ImagePopup from '../components/ImagePopup';
@@ -63,14 +63,14 @@ export default function Art() {
     const [activeSection, setActiveSection] = useState<string>('acrylic');
 
     // The IDs and titles for each section
-    const sectionIds = [
+    const sectionIds = useMemo(() => [
         { id: 'acrylic', title: 'Acrylic Paintings' },
         { id: 'mixed-media', title: 'Mixed Media Collages' },
         { id: 'fine-line', title: 'Fine Line Drawings (digitized)' },
         { id: 'flowers', title: 'Flower Arrangements' },
         { id: 'bw-film', title: 'Black & White Film Photography' },
         { id: 'digital', title: 'Digital Photography' },
-    ];
+    ], []);
 
     // Check the URL hash on initial load to open any linked image
     useEffect(() => {
@@ -85,12 +85,12 @@ export default function Art() {
 
     // === Intersection Observer to highlight the active section ===
     useEffect(() => {
-        let currentSections = new Map(); // Track all visible sections
-
+        const currentSections = new Map(); // Changed from let to const
+        
         const observerOptions = {
             root: null,
             rootMargin: '-20% 0px -30% 0px',
-            threshold: [0, 0.25, 0.5, 0.75, 1] // Multiple thresholds for better tracking
+            threshold: [0, 0.25, 0.5, 0.75, 1]
         };
 
         const callback = (entries: IntersectionObserverEntry[]) => {

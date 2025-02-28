@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 
 interface ImagePopupProps {
   image: {
@@ -14,8 +13,6 @@ interface ImagePopupProps {
 }
 
 export default function ImagePopup({ image, onClose }: ImagePopupProps) {
-  const router = useRouter();
-
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();

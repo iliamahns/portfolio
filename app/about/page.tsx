@@ -2,14 +2,7 @@
 
 import { ABOUT_PAGE } from '../data/about-content';
 import { useState } from 'react';
-
-function SkillTag({ name }: { name: string }) {
-    return (
-        <span className="inline-block bg-black/5 rounded-full px-3 py-1 text-sm mr-2 mb-2">
-            {name}
-        </span>
-    );
-}
+import Image from 'next/image';
 
 function SkillTagSmall({ name }: { name: string }) {
     return (
@@ -69,9 +62,11 @@ export default function About() {
           
                     </div>
                     <div className="max-w-[400px] relative">
-                        <img
+                        <Image
                             src="/images/ilia.png"
                             alt="Profile"
+                            width={400}
+                            height={400}
                             className="object-cover h-full"
                         />
                     </div>
@@ -85,9 +80,11 @@ export default function About() {
                     <div key={index} className="mb-8 border-b border-gray-200 pb-8">
                         <div className="flex items-start gap-4">
                             <div className="w-12 h-12 relative flex-shrink-0">
-                                <img
+                                <Image
                                     src={exp.logo}
                                     alt={`${exp.company} logo`}
+                                    width={48}
+                                    height={48}
                                     className="object-contain w-full h-full"
                                 />
                             </div>
@@ -119,9 +116,11 @@ export default function About() {
                 {ABOUT_PAGE.certifications.map((cert, index) => (
                     <div key={index} className="mb-4 flex items-center gap-4">
                         <div className="w-10 h-10 relative flex-shrink-0">
-                            <img
+                            <Image
                                 src={cert.logo}
                                 alt={`${cert.issuer} logo`}
+                                width={40}
+                                height={40}
                                 className="object-contain w-full h-full"
                             />
                         </div>
@@ -152,9 +151,11 @@ export default function About() {
                 {ABOUT_PAGE.education.map((edu, index) => (
                     <div key={index} className="mb-8 flex items-start gap-4">
                         <div className="w-12 h-12 relative flex-shrink-0">
-                            <img
+                            <Image
                                 src={edu.logo}
                                 alt={`${edu.school} logo`}
+                                width={48}
+                                height={48}
                                 className="object-contain w-full h-full"
                             />
                         </div>
