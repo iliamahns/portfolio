@@ -75,20 +75,26 @@ export const ART_PAGE = {
         {
             path: "/images/art/goodbye.jpg",
             title: "THE GOODBYE",
-            caption: "-",
+            caption: "Freesia, Alstroemeria, Calla Lily, Hyacinth, Asparagus Fern",
             slug: "goodbye"
         },
         {
             path: "/images/art/birthday.jpeg",
             title: "THE BIRTHDAY",
-            caption: "-",
+            caption: "Green Ball Dianthus, Blue Thistle, Larkspur, Spidermum, Baby’s Breath, Ruscus",
             slug: "birthday"
         },
         {
             path: "/images/art/hope.jpeg",
             title: "HOPE",
-            caption: "-",
+            caption: "Craspedia, Assorted Feverfew, Orange and Yellow Lily, Assorted Poms, Red Amaranth, Solidago",
             slug: "hope"
+        },
+        {
+            path: "/images/art/thankyou.jpeg",
+            title: "THANK YOU",
+            caption: "Ornamental Pincushion, Red Amaranth, Marigold, Assorted Orange Poms, Orange Rose Salal, Philodendron Leaf",
+            slug: "thankyou"
         },
         
     ],
