@@ -96,6 +96,12 @@ export const ART_PAGE = {
             caption: "Ornamental Pincushion, Red Amaranth, Marigold, Assorted Orange Poms, Orange Rose Salal, Philodendron Leaf",
             slug: "thankyou"
         },
+        {
+            path: "/images/art/thealien.jpeg",
+            title: "THE ALIEN",
+            caption: "Astrantia, Laceflower, Alstroemeria, Baby Blue Eucalyptus",
+            slug: "thealien"
+        },
         
     ],
     bw_film_photography: [
