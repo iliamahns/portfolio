@@ -53,7 +53,7 @@ export default function About() {
             <div className="mt-20 mb-20">
                 <div className="flex gap-8 items-start">
                     <div>
-                        <h1 className="text-6xl font-bold mb-6">HI, I'M ILIA :)</h1>
+                        <h1 className="text-6xl font-bold mb-6">HI, I&apos;M ILIA :)</h1>
 
                         <p className="text-lg flex-1 mb-4">
                             A blossoming designer, educator and artist who is driven by a passion for continuous learning, creative expression, and collective growth.
