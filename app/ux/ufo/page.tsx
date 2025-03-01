@@ -174,6 +174,42 @@ export default function UFOProject() {
             </div>
           </div>
         </div>
+
+        {/* Platform */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold mb-6">Platform</h2>
+          <p className="text-lg mb-12">
+            Feeling confident about the vision of what functions this platform would showcase, I started with paper wireframes, then digital wireframes, and lo-fi prototypes.
+          </p>
+          
+          {/* Paper Wireframes */}
+          <div className="grid grid-cols-6 gap-4 mb-4">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={`paper-${num}`} className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src={`/images/projects/ufo/${num}p.png`}
+                  alt={`Paper Wireframe ${num}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Digital Wireframes */}
+          <div className="grid grid-cols-6 gap-4">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={`digital-${num}`} className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src={`/images/projects/ufo/${num}d.png`}
+                  alt={`Digital Wireframe ${num}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );
