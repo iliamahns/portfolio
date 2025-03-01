@@ -34,7 +34,7 @@ export default function UFOProject() {
 
       {/* Project Logo/Hero */}
       <div className="mb-20 max-w-2xl mx-auto">
-        <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
+        <div className="relative aspect-video bg-black overflow-hidden">
           <Image
             src="/images/projects/ufo/home.png"
             alt="UFO Project"
@@ -108,11 +108,72 @@ export default function UFOProject() {
       {/* Design Process */}
       <section className="mb-20">
         <h2 className="text-3xl font-bold mb-6">Design Process</h2>
-        <p className="text-lg">
+        <p className="text-lg mb-12">
           By creating a User Persona and User Journey Map, I could mindfully think of user needs 
           throughout the design process. Then came the story boards and iterations of the 
           Information Architecture.
         </p>
+
+        {/* User Persona and Journey Map */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-medium text-center">User Persona and User Journey Map</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/projects/ufo/rafa.png"
+                alt="User Persona"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/projects/ufo/persona.png"
+                alt="User Journey Map"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Storyboards */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-medium mb-6 text-center">Storyboards</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/projects/ufo/storyboard.jpeg"
+                alt="Storyboard 1"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/projects/ufo/uxstoryboard.png"
+                alt="Storyboard 2"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Information Architecture */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-medium mb-6 text-center">Information Architecture</h3>
+          <div className="max-w-[calc(50%-1rem)] mx-auto">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/projects/ufo/arch.png"
+                alt="Information Architecture"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
