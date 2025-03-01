@@ -64,9 +64,9 @@ export default function Art() {
 
     // The IDs and titles for each section
     const sectionIds = useMemo(() => [
-        { id: 'acrylic', title: 'Acrylic Paintings' },
-        { id: 'mixed-media', title: 'Mixed Media Collages' },
         { id: 'fine-line', title: 'Fine Line Drawings (digitized)' },
+        { id: 'mixed-media', title: 'Mixed Media Collages' },
+        { id: 'acrylic', title: 'Acrylic Paintings' },
         { id: 'flowers', title: 'Flower Arrangements' },
         { id: 'bw-film', title: 'Black & White Film Photography' },
         { id: 'digital', title: 'Digital Photography' },
@@ -170,9 +170,9 @@ export default function Art() {
             {/* RIGHT CONTENT (scrollable) */}
             <div className="flex-1 overflow-y-auto p-6 pt-[144px]">
                 <ArtSection
-                    title="Acrylic Paintings"
-                    id="acrylic"
-                    items={ART_PAGE.acrylic_paintings}
+                    title="Fine Line Drawings (digitized)"
+                    id="fine-line"
+                    items={ART_PAGE.fine_line_drawings}
                     onImageSelect={setSelectedImage}
                 />
                 <ArtSection
@@ -182,9 +182,9 @@ export default function Art() {
                     onImageSelect={setSelectedImage}
                 />
                 <ArtSection
-                    title="Fine Line Drawings (digitized)"
-                    id="fine-line"
-                    items={ART_PAGE.fine_line_drawings}
+                    title="Acrylic Paintings"
+                    id="acrylic"
+                    items={ART_PAGE.acrylic_paintings}
                     onImageSelect={setSelectedImage}
                 />
                 <ArtSection
