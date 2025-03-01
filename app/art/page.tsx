@@ -169,6 +169,8 @@ export default function Art() {
 
             {/* RIGHT CONTENT (scrollable) */}
             <div className="flex-1 overflow-y-auto p-6 pt-[144px]">
+                {/* Add mobile title */}
+                <h1 className="text-6xl font-bold mb-12 pb-2 md:hidden">ART</h1>
                 <ArtSection
                     title="Fine Line Drawings (digitized)"
                     id="fine-line"
