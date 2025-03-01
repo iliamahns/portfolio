@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav className="bg-transparent py-4">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 pt-4 sm:px-6 lg:px-8">
         {/* Desktop Navigation */}
         <div className="hidden sm:flex items-center">
           <div className="w-1/3 flex justify-start">
@@ -58,8 +58,8 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="flex sm:hidden items-center justify-between">
-          <span className="text-[18px] font-bold">ILIA MAHNS</span>
+        <div className="flex sm:hidden items-center justify-between pt-4">
+          <span className="text-[18px] font-bold py-2">ILIA MAHNS</span>
           
           {/* Hamburger Button */}
           <button 
