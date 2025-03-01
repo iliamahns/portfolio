@@ -49,7 +49,7 @@ function ArtSection({ title, id, items, onImageSelect }: ArtSectionProps) {
                                 fill
                                 className="object-cover transition-transform group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity" />
+                            <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-40 transition-opacity" />
                         </div>
                     </div>
                 ))}
@@ -155,7 +155,7 @@ export default function Art() {
                         <button
                             key={section.id}
                             onClick={() => handleMenuClick(section.id)}
-                            className={`block w-full text-left p-2 rounded-md transition-colors 
+                            className={`block w-full text-left p-2 transition-colors 
                 ${activeSection === section.id
                                         ? 'bg-[#D8E1C3] font-semibold'
                                         : 'hover:bg-[#F2F5EA]'
