@@ -28,14 +28,14 @@ function ArtSection({ title, id, items, onImageSelect }: ArtSectionProps) {
     };
 
     return (
-        <section id={id} className="mb-20 scroll-mt-24">
+        <section id={id} className="mb-48 scroll-mt-24">
             {/*
         Hide the title on desktop with md:hidden,
         so it only appears on mobile/small screens
       */}
-            <h2 className="text-2xl font-bold mb-8 md:hidden">{title}</h2>
+            <h2 className="text-2xl font-bold mb-16 md:hidden">{title}</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 {items.map((item, index) => (
                     <div
                         key={index}
