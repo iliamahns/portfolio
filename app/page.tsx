@@ -3,7 +3,7 @@ import Butterflies from './components/Butterflies';
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 flex flex-col items-center">
+    <main className="min-h-screen p-8 flex flex-col items-center justify-center -mt-20">
       <Butterflies />
       <div className="text-center mb-20">
         <h1 className="text-6xl font-bold mb-4">ILIA MAHNS</h1>
