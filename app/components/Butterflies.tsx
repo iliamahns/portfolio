@@ -117,21 +117,34 @@ export default function Butterflies() {
         // Movement
         butterfly.body.position.add(data.velocity);
         
-        // Bounds checking with smoother turns
-        if (Math.abs(butterfly.body.position.x) > 10) {
-          data.velocity.x *= -0.95;
-          data.velocity.y += (Math.random() - 0.5) * 0.02;
+        // Add gentle hovering rotation instead of movement-based rotation
+        butterfly.body.rotation.y = Math.sin(time * 0.5) * 0.1;
+        butterfly.body.rotation.x = Math.cos(time * 0.3) * 0.05;
+        
+        // Bounds checking with smoother turns and velocity capping
+        const MAX_VELOCITY = 0.05;
+        const BOUNDARY_MARGIN = 9.5;  // Slightly inside the boundary for smoother turns
+        
+        if (Math.abs(butterfly.body.position.x) > BOUNDARY_MARGIN) {
+          data.velocity.x *= -0.8;  // Gentler bounce
+          data.velocity.y += (Math.random() - 0.5) * 0.01;  // Smaller random adjustment
+          butterfly.body.position.x = Math.sign(butterfly.body.position.x) * BOUNDARY_MARGIN;
         }
-        if (Math.abs(butterfly.body.position.y) > 10) {
-          data.velocity.y *= -0.95;
-          data.velocity.x += (Math.random() - 0.5) * 0.02;
+        if (Math.abs(butterfly.body.position.y) > BOUNDARY_MARGIN) {
+          data.velocity.y *= -0.8;
+          data.velocity.x += (Math.random() - 0.5) * 0.01;
+          butterfly.body.position.y = Math.sign(butterfly.body.position.y) * BOUNDARY_MARGIN;
         }
-        if (Math.abs(butterfly.body.position.z) > 10) {
-          data.velocity.z *= -0.95;
+        if (Math.abs(butterfly.body.position.z) > BOUNDARY_MARGIN) {
+          data.velocity.z *= -0.8;
+          butterfly.body.position.z = Math.sign(butterfly.body.position.z) * BOUNDARY_MARGIN;
         }
         
-        // Rotate to face movement direction
-        butterfly.body.lookAt(butterfly.body.position.clone().add(data.velocity));
+        // Cap maximum velocity
+        const speed = data.velocity.length();
+        if (speed > MAX_VELOCITY) {
+          data.velocity.multiplyScalar(MAX_VELOCITY / speed);
+        }
       });
 
       renderer.render(scene, camera);
