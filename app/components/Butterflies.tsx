@@ -57,7 +57,7 @@ export default function Butterflies() {
     const butterflies: { body: THREE.Group; leftWing: THREE.Mesh; rightWing: THREE.Mesh }[] = [];
     const butterflyData: { velocity: THREE.Vector3; wingSpeed: number }[] = [];
     
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {  // Changed from 19 to 12 butterflies
       const butterflyGroup = new THREE.Group();
       
       // Create wings with different geometries
@@ -74,10 +74,11 @@ export default function Butterflies() {
       butterflyGroup.add(leftWing);
       butterflyGroup.add(rightWing);
       
+      // Spread butterflies wider on x-axis (-15 to 15) but keep y and z the same (-10 to 10)
       butterflyGroup.position.set(
-        Math.random() * 20 - 10,
-        Math.random() * 20 - 10,
-        Math.random() * 20 - 10
+        Math.random() * 30 - 15,  // Wider x distribution
+        Math.random() * 20 - 10,  // Original y distribution
+        Math.random() * 20 - 10   // Original z distribution
       );
       
       butterflies.push({
@@ -123,21 +124,22 @@ export default function Butterflies() {
         
         // Bounds checking with smoother turns and velocity capping
         const MAX_VELOCITY = 0.05;
-        const BOUNDARY_MARGIN = 9.5;  // Slightly inside the boundary for smoother turns
+        const X_BOUNDARY_MARGIN = 14.5;  // Wider x-axis boundary
+        const YZ_BOUNDARY_MARGIN = 9.5;  // Original y and z boundary
         
-        if (Math.abs(butterfly.body.position.x) > BOUNDARY_MARGIN) {
+        if (Math.abs(butterfly.body.position.x) > X_BOUNDARY_MARGIN) {
           data.velocity.x *= -0.8;  // Gentler bounce
           data.velocity.y += (Math.random() - 0.5) * 0.01;  // Smaller random adjustment
-          butterfly.body.position.x = Math.sign(butterfly.body.position.x) * BOUNDARY_MARGIN;
+          butterfly.body.position.x = Math.sign(butterfly.body.position.x) * X_BOUNDARY_MARGIN;
         }
-        if (Math.abs(butterfly.body.position.y) > BOUNDARY_MARGIN) {
+        if (Math.abs(butterfly.body.position.y) > YZ_BOUNDARY_MARGIN) {
           data.velocity.y *= -0.8;
           data.velocity.x += (Math.random() - 0.5) * 0.01;
-          butterfly.body.position.y = Math.sign(butterfly.body.position.y) * BOUNDARY_MARGIN;
+          butterfly.body.position.y = Math.sign(butterfly.body.position.y) * YZ_BOUNDARY_MARGIN;
         }
-        if (Math.abs(butterfly.body.position.z) > BOUNDARY_MARGIN) {
+        if (Math.abs(butterfly.body.position.z) > YZ_BOUNDARY_MARGIN) {
           data.velocity.z *= -0.8;
-          butterfly.body.position.z = Math.sign(butterfly.body.position.z) * BOUNDARY_MARGIN;
+          butterfly.body.position.z = Math.sign(butterfly.body.position.z) * YZ_BOUNDARY_MARGIN;
         }
         
         // Cap maximum velocity
