@@ -8,7 +8,7 @@ type InsightProps = {
 
 function Insight({ title, description }: InsightProps) {
   return (
-    <div className="flex-1">
+    <div className="flex-1 text-center">
       <h3 className="text-xl font-medium mb-2">{title}</h3>
       <p className="text-gray-700">{description}</p>
     </div>
@@ -56,15 +56,15 @@ export default function UFOProject() {
 
         <div className="grid grid-cols-3 gap-8 text-center">
           <div>
-            <h3 className="text-xl font-medium mb-2">Role</h3>
+            <h3 className="text-xl font-medium mb-2 underline">Role</h3>
             <p>Primary Researcher<br />and Designer</p>
           </div>
           <div>
-            <h3 className="text-xl font-medium mb-2">Tool</h3>
+            <h3 className="text-xl font-medium mb-2 underline">Tool</h3>
             <p>Figma</p>
           </div>
           <div>
-            <h3 className="text-xl font-medium mb-2">Date</h3>
+            <h3 className="text-xl font-medium mb-2 underline">Date</h3>
             <p>December 2024 -<br />February 2025</p>
           </div>
         </div>
