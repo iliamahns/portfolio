@@ -20,7 +20,11 @@ export default function UX() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="group w-full">
           <Link href="/ux/ufo" className="block">
-            <div className="relative aspect-square w-full mb-4 overflow-hidden bg-gray-100">
+            <div className="group-hover:underline">
+              <h2 className="text-xl font-bold mb-2 group-hover:font-extrabold">UFO</h2>
+              <h3 className="text-md mb-4 group-hover:font-bold">Currency Exchange Platform</h3>
+            </div>
+            <div className="relative aspect-square w-full overflow-hidden bg-gray-100">
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src={"/images/projects/ufo/home.png"}
@@ -31,8 +35,6 @@ export default function UX() {
                 />
               </div>
             </div>
-            <h2 className="text-xl font-bold mb-1">UFO</h2>
-            <h3 className="text-md text-gray-600">Currency Exchange Platform</h3>
           </Link>
         </div>
       </div>
