@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { UX_PAGE } from '../data/ux-content';
 
 export default function UX() {
   return (
@@ -7,11 +8,11 @@ export default function UX() {
       {/* Header Section */}
       <div className="mt-20 mb-24">
         <div className="relative">
-          <h1 className="text-6xl font-bold mb-6">PROJECTS</h1>
+          <h1 className="text-6xl font-bold mb-6">{UX_PAGE.intro.title}</h1>
         </div>
 
         <div className="relative">
-          <p className="text-xl">Welcome to my UX Design Portfolio! I recently started my journey into UX Design and am excited to share my work here.</p>
+          <p className="text-xl">{UX_PAGE.intro.description}</p>
         </div>
       </div>
 
