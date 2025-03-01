@@ -23,7 +23,7 @@ export const ART_PAGE = {
         {
             path: "/images/art/black_hole.jpg",
             title: "THE BLACK HOLE",
-            caption: "Acrylic gouache with color aid paper on 16 x 20 mixed media paper",
+            caption: "Acrylic gouache with color aid paper on 16 x 20 mixed media paper, colors altered digitally",
             slug: "the_black_hole"
         },
         {
