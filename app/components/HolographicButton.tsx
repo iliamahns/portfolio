@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -17,7 +19,7 @@ export default function HolographicButton({ href, text, imagePath, size = 'lg' }
   
   return (
     <Link href={href} className="group relative">
-      <div className={`${dimensions} rounded-full overflow-hidden cursor-pointer hover:scale-105 hover:shadow-lg hover:opacity-80 ease-linear transition-transform relative ${isCurrentPage ? 'opacity-60' : ''}`}>
+      <div className={`${dimensions} rounded-full overflow-hidden cursor-pointer ${!isCurrentPage ? 'hover:scale-105 hover:opacity-80 hover:shadow-lg' : ''} ease-linear transition-transform relative ${isCurrentPage ? 'opacity-60' : ''}`}>
         <div className="absolute inset-0 rounded-full overflow-hidden">
           <Image
             src={imagePath}
