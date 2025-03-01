@@ -25,32 +25,40 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
 
   return (
     <div 
-      className="fixed inset-0 bg-[#FFF9F2] z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-[#FFF9F2] z-50 flex items-center justify-center p-2 sm:p-4"
       onClick={onClose}
     >
       <button
         onClick={onClose}
-        className="absolute top-10 right-10 text-black hover:opacity-70 z-10 text-xl"
+        className="absolute top-4 right-4 sm:top-10 sm:right-10 text-black hover:opacity-70 z-10 text-xl"
       >
         ✕
       </button>
 
       <div 
-        className="max-w-5xl w-full mx-auto"
+        className="w-full mx-auto"
+        style={{ maxWidth: 'min(95vh, 64rem)' }}
         onClick={e => e.stopPropagation()}
       >
-        <div className="relative w-full mb-4" style={{ aspectRatio: '16/9' }}>
+        <div 
+          className="relative w-full mb-2 sm:mb-4" 
+          style={{ 
+            aspectRatio: '16/9',
+            minHeight: '70vh',
+            maxHeight: '85vh'
+          }}
+        >
           <Image
             src={image.path}
             alt={image.title}
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+            sizes="(max-width: 768px) 95vh, 64rem"
           />
         </div>
-        <div className="text-black text-center px-4">
-          <h2 className="text-xl font-medium">{image.title}</h2>
-          <p className="text-sm mt-1 text-gray-700">{image.caption}</p>
+        <div className="text-black text-center px-2 sm:px-4">
+          <h2 className="text-lg sm:text-xl font-medium">{image.title}</h2>
+          <p className="text-xs sm:text-sm mt-1 text-gray-700">{image.caption}</p>
         </div>
       </div>
     </div>
