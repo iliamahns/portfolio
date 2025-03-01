@@ -30,26 +30,27 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-black hover:opacity-70 z-10"
+        className="absolute top-10 right-10 text-black hover:opacity-70 z-10 text-xl"
       >
         ✕
       </button>
 
       <div 
-        className="max-w-2xl w-full"
+        className="max-w-5xl w-full mx-auto"
         onClick={e => e.stopPropagation()}
       >
-        <div className="relative aspect-square w-full mb-4">
+        <div className="relative w-full mb-4" style={{ aspectRatio: '16/9' }}>
           <Image
             src={image.path}
             alt={image.title}
             fill
             className="object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
           />
         </div>
-        <div className="text-black">
+        <div className="text-black text-center px-4">
           <h2 className="text-xl font-medium">{image.title}</h2>
-          <p className="text-sm mt-1">{image.caption}</p>
+          <p className="text-sm mt-1 text-gray-700">{image.caption}</p>
         </div>
       </div>
     </div>
