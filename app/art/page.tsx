@@ -64,7 +64,7 @@ export default function Art() {
 
     // The IDs and titles for each section
     const sectionIds = useMemo(() => [
-        { id: 'fine-line', title: 'Fine Line Drawings (digitized)' },
+        { id: 'fine-line', title: 'Fine Line Drawings' },
         { id: 'mixed-media', title: 'Mixed Media Collages' },
         { id: 'acrylic', title: 'Acrylic Paintings' },
         { id: 'flowers', title: 'Flower Arrangements' },
@@ -172,7 +172,7 @@ export default function Art() {
                 {/* Add mobile title */}
                 <h1 className="text-6xl font-bold mb-12 pb-2 md:hidden">ART</h1>
                 <ArtSection
-                    title="Fine Line Drawings (digitized)"
+                    title="Fine Line Drawings"
                     id="fine-line"
                     items={ART_PAGE.fine_line_drawings}
                     onImageSelect={setSelectedImage}
