@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function SkillTagSmall({ name }: { name: string }) {
     return (
-        <span className="inline-block bg-black/5 rounded-full px-3 py-1 text-xs mr-2 mb-2">
+        <span className="inline-block bg-[#F2F5EA] rounded-full px-3 py-1 text-sm mr-2 mb-2">
             {name}
         </span>
     );
@@ -20,16 +20,15 @@ function SkillTabs() {
     return (
         <div className="mt-8">
             {/* Tab Headers */}
-            <div className="flex flex-wrap gap-2 mb-4">
-
+            <div className="flex flex-col space-y-2">
                 {categories.map(category => (
                     <button
                         key={category}
                         onClick={() => setActiveTab(category as SkillCategories)}
-                        className={`px-4 py-2 text-sm rounded-full transition-colors
+                        className={`w-full text-left p-2 transition-colors
                             ${activeTab === category
-                                ? 'bg-black text-white'
-                                : 'bg-black/5 hover:bg-black/10'}`}
+                                ? 'bg-[#D8E1C3] font-semibold'
+                                : 'hover:bg-[#F2F5EA]'}`}
                     >
                         {category}
                     </button>
@@ -37,7 +36,7 @@ function SkillTabs() {
             </div>
 
             {/* Tab Content */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mt-4">
                 {ABOUT_PAGE.skills[activeTab].map(skill => (
                     <SkillTagSmall key={skill} name={skill} />
                 ))}
@@ -90,13 +89,11 @@ export default function About() {
                                 <div>
                                     <h3 className="font-medium text-lg">{edu.school}</h3>
                                     <p className="text-sm mb-1">
-                                        {edu.degree} • <span className="text-gray-600">{edu.period}</span>
+                                        {edu.degree} • <span>{edu.period}</span>
                                     </p>
-                                    <ul className="list-disc list-inside text-sm">
-                                        {edu.details.map((detail, i) => (
-                                            <li key={i}>{detail}</li>
-                                        ))}
-                                    </ul>
+                                    {edu.details.map((detail, i) => (
+                                        <p key={i} className="text-sm text-gray-600">{detail}</p>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -132,7 +129,7 @@ export default function About() {
                                             </a>
                                         ) : exp.company}
                                     </p>
-                                    <p className="text-sm text-gray-600">{exp.period}</p>
+                                    <p className="text-sm">{exp.period}</p>
                                     <p className="text-sm text-gray-600">{exp.location}</p>
                                 </div>
                             </div>

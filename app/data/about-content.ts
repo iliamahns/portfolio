@@ -150,18 +150,48 @@ export const ABOUT_PAGE = {
             period: 'September 2023 - February 2024',
             description: 'Led outdoor education programs focusing on environmental awareness and team building.',
             skills: ['Leadership', 'Public Speaking', 'Environmental Education'],
-            logo: '/images/logos/snj.png'
+            logo: '/images/logos/mb.jpg'
+        },
+        {
+            title: 'Peer Mentor',
+            company: 'International Rescue Committee',
+            companyUrl: 'https://www.rescue.org',
+            location: 'Manhattan, New York',
+            period: 'Summer 2022',
+            description: '',
+            skills: [],
+            logo: '/images/logos/irc.jpeg'
+        },
+        {
+            title: 'Peer Educator Intern',
+            company: 'Support Advocacy & Violence Prevention (SAVP) - Vassar College',
+            companyUrl: 'https://offices.vassar.edu/savp/',
+            location: 'Poughkeepsie, New York',
+            period: 'Fall 2021 - Spring 2023',
+            description: '',
+            skills: [],
+            logo: '/images/logos/savp.png'
         }
     ],
 
     education: [
         {
+            school: 'Google UX Design Course',
+            degree: 'Professional Certificate',
+            period: 'Fall 2024 - Spring 2025',
+            details: [
+                '7 course series for entry-level job readiness'
+            ],
+            logo: '/images/logos/google.png'
+        },
+        {
             school: 'Vassar College',
             degree: 'Bachelor of Arts',
             period: '2019-2023',
             details: [
-                "Dean's List 2019-2023",
-                'Major in International Studies, Minor in Education and Hispanic Studies'
+                "Dean's List",
+                'Major in International Studies',
+                'Minors in Education and Hispanic Studies'
             ],
             logo: '/images/logos/vassar.png'
         }
