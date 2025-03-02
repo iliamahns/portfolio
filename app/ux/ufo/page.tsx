@@ -17,7 +17,7 @@ function Insight({ title, description }: InsightProps) {
 
 export default function UFOProject() {
   return (
-    <main className="min-h-screen p-8 mx-[15%]">
+    <main className="min-h-screen p-8 mx-[5%] md:mx-[15%]">
       {/* Back Button */}
       <Link href="/ux" className="inline-flex items-center text-lg mb-8 hover:underline">
         <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +163,7 @@ export default function UFOProject() {
         {/* Information Architecture */}
         <div className="mb-12">
           <h3 className="text-2xl font-medium mb-6 text-center">Information Architecture</h3>
-          <div className="max-w-[calc(50%-1rem)] mx-auto">
+          <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/projects/ufo/arch.png"
@@ -183,7 +183,7 @@ export default function UFOProject() {
           </p>
           
           {/* Paper Wireframes */}
-          <div className="grid grid-cols-6 gap-4 mb-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mb-4">
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={`paper-${num}`} className="relative aspect-[3/4] overflow-hidden">
                 <Image
@@ -197,7 +197,7 @@ export default function UFOProject() {
           </div>
 
           {/* Digital Wireframes */}
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={`digital-${num}`} className="relative aspect-[3/4] overflow-hidden">
                 <Image
