@@ -79,7 +79,7 @@ export default function Navigation() {
               {/* Close Button */}
               <button 
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute top-4 right-4 p-2"
+                className="absolute top-12 right-12 p-2"
               >
                 <div className="w-6 h-0.5 bg-black transform rotate-45 absolute"></div>
                 <div className="w-6 h-0.5 bg-black transform -rotate-45 absolute"></div>
