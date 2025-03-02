@@ -13,34 +13,20 @@ function SkillTagSmall({ name }: { name: string }) {
 }
 
 function SkillTabs() {
-    type SkillCategories = keyof typeof ABOUT_PAGE.skills;
-    const [activeTab, setActiveTab] = useState<SkillCategories>(Object.keys(ABOUT_PAGE.skills)[0] as SkillCategories);
     const categories = Object.keys(ABOUT_PAGE.skills);
 
     return (
-        <div className="mt-8">
-            {/* Tab Headers */}
-            <div className="flex flex-col space-y-2">
-                {categories.map(category => (
-                    <button
-                        key={category}
-                        onClick={() => setActiveTab(category as SkillCategories)}
-                        className={`w-full text-left p-2 transition-colors
-                            ${activeTab === category
-                                ? 'bg-[#D8E1C3] font-semibold'
-                                : 'hover:bg-[#F2F5EA]'}`}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
-
-            {/* Tab Content */}
-            <div className="flex flex-wrap gap-2 mt-4">
-                {ABOUT_PAGE.skills[activeTab].map(skill => (
-                    <SkillTagSmall key={skill} name={skill} />
-                ))}
-            </div>
+        <div className="space-y-6">
+            {categories.map(category => (
+                <div key={category}>
+                    <h3 className="font-medium mb-3">{category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                        {ABOUT_PAGE.skills[category as keyof typeof ABOUT_PAGE.skills].map(skill => (
+                            <SkillTagSmall key={skill} name={skill} />
+                        ))}
+                    </div>
+                </div>
+            ))}
         </div>
     );
 }
