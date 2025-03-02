@@ -33,7 +33,7 @@ export default function UFOProject() {
       </div>
 
       {/* Project Logo/Hero */}
-      <div className="mb-20 max-w-2xl mx-auto">
+      <div className="mb-32 max-w-2xl mx-auto">
         <div className="relative aspect-video bg-black overflow-hidden">
           <Image
             src="/images/projects/ufo/home.png"
@@ -45,7 +45,7 @@ export default function UFOProject() {
       </div>
 
       {/* Project Overview */}
-      <section className="mb-20">
+      <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
         <p className="text-lg mb-12">
           This was my first UX Design project completed alongside the Google UX Design 7 course 
@@ -71,7 +71,7 @@ export default function UFOProject() {
       </section>
 
       {/* Primary Research */}
-      <section className="mb-20">
+      <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Primary Research</h2>
         <p className="text-lg mb-12">
           Looking into other global currency exchange platforms I gained insight into the types of 
@@ -106,7 +106,7 @@ export default function UFOProject() {
       </section>
 
       {/* Design Process */}
-      <section className="mb-20">
+      <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Design Process</h2>
         <p className="text-lg mb-12">
           By creating a User Persona and User Journey Map, I could mindfully think of user needs 
@@ -138,7 +138,7 @@ export default function UFOProject() {
         </div>
 
         {/* Storyboards */}
-        <div className="mb-20">
+        <div className="mb-32">
           <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Storyboards</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -161,7 +161,7 @@ export default function UFOProject() {
         </div>
 
         {/* Information Architecture */}
-        <div className="mb-20">
+        <div className="mb-32">
           <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Information Architecture</h3>
           <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -212,7 +212,7 @@ export default function UFOProject() {
         </div>
 
         {/* Usability Testing */}
-        <section className="mb-20">
+        <section className="mb-32">
           <h2 className="text-3xl font-bold mb-6">Usability Testing</h2>
           <p className="text-lg mb-12">
             I conducted a moderated usability test with five global travelers in my life with the lo-fi prototypes. 
@@ -241,7 +241,7 @@ export default function UFOProject() {
         </section>
 
         {/* Hi-Fi Prototypes */}
-        <section className="mb-20">
+        <section className="mb-32">
           <h2 className="text-3xl font-bold mb-6">Hi-Fi Prototypes</h2>
           <p className="text-lg mb-12">
             Feeling satisfied with the upgraded designs, I moved into making a sticker sheet and high fidelity prototyping.
@@ -306,7 +306,7 @@ export default function UFOProject() {
           </div>
 
           {/* Video */}
-          <div className="mb-4">
+          <div className="mb-32">
             <div className="relative aspect-video overflow-hidden">
               <video
                 controls
@@ -318,6 +318,38 @@ export default function UFOProject() {
               </video>
             </div>
             <p className="text-right text-gray-600 italic mt-2">Video simulating user flow for sending money</p>
+          </div>
+
+          {/* Accessibility Considerations */}
+          <div className="mb-32">
+            <h2 className="text-3xl font-bold mb-6 text-center">Accessibility Considerations</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Insight
+                title="Color"
+                description="Utilized color blindness simulators to double check the contrast between the color palette I was designing for this platform."
+              />
+              <Insight
+                title="Text To Speech"
+                description="Each icon included a label in text for screen readers."
+              />
+              <Insight
+                title="Motions and Gestures"
+                description="Use of simple and clean transitions between elements."
+              />
+            </div>
+          </div>
+
+          {/* Takeaways */}
+          <div className="mb-32">
+            <h2 className="text-3xl font-bold mb-6 text-center">Takeaways</h2>
+            <div className="max-w-3xl mx-auto">
+              <p className="text-lg text-center mb-8">
+                I am currently living in a foreign country and so parts of this design process felt personal and like something I wanted to share with my friends here. Having a different currency than a new friend may feel like a challenge but it can also serve as a way to connect!
+              </p>
+              <p className="text-lg text-center">
+                I am so grateful to share my first project of many with you. I learned so much throughout the Google UX Design Course, other UX resources, and of course FIGMA!!!
+              </p>
+            </div>
           </div>
         </section>
       </section>
