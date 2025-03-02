@@ -117,7 +117,7 @@ export const ABOUT_PAGE = {
             company: 'NALCAP',
             companyUrl: 'https://www.educacionyfp.gob.es/eeuu/convocatorias-programas/convocatorias-eeuu/nalcap.html',
             location: 'Cadiz, Spain',
-            period: '09/2024-Present',
+            period: 'September 2024 - Present',
             description: 'Teaching English language and cultural exchange in Spanish public schools.',
             skills: ['Cross-Cultural Communication', 'Curriculum Development', 'English Language Learning'],
             logo: '/images/logos/nalcap.jpeg'
@@ -127,30 +127,30 @@ export const ABOUT_PAGE = {
             company: 'SNJ',
             companyUrl: 'https://www.sierranevadajourneys.org/',
             location: 'Sierra Nevada, California',
-            period: '03/2023 - 08/2023',
+            period: 'February 2024 - June 2024',
             description: 'Led outdoor education programs focusing on environmental awareness and team building.',
             skills: ['Leadership', 'Public Speaking', 'Environmental Education'],
             logo: '/images/logos/snj.png'
+        },
+        {
+            title: 'Visual Arts Lead Teacher',
+            company: 'PlayArts',
+            companyUrl: 'https://www.playartsphilly.com/',
+            location: 'Philadelphia, Pennsylvania',
+            period: 'September 2023 - February 2024',
+            description: 'Developed and taught art curriculum for young learners.',
+            skills: ['Creative Expression', 'Curriculum Development', 'Visual Design'],
+            logo: '/images/logos/play_arts.jpg'
         },
         {
             title: 'Florist',
             company: 'Market Blooms',
             location: 'Philadelphia, Pennsylvania',
             companyUrl: 'https://readingterminalmarket.org/merchant/market-blooms/',
-            period: '09/2022 - 03/2023',
+            period: 'September 2023 - February 2024',
             description: 'Led outdoor education programs focusing on environmental awareness and team building.',
             skills: ['Leadership', 'Public Speaking', 'Environmental Education'],
             logo: '/images/logos/snj.png'
-        },
-        {
-            title: 'Visual Art Teacher',
-            company: 'PlayArts',
-            companyUrl: 'https://www.playartsphilly.com/',
-            location: 'Philadelphia, Pennsylvania',
-            period: '09/2022 - 03/2023',
-            description: 'Developed and taught art curriculum for young learners.',
-            skills: ['Creative Expression', 'Curriculum Development', 'Visual Design'],
-            logo: '/images/logos/play_arts.jpg'
         }
     ],
 
@@ -161,8 +161,7 @@ export const ABOUT_PAGE = {
             period: '2019-2023',
             details: [
                 "Dean's List 2019-2023",
-                'Major in International Studies, Minor in Education and Hispanic Studies',
-                'Senior Thesis: "Cross-Cultural Education in Modern Society"'
+                'Major in International Studies, Minor in Education and Hispanic Studies'
             ],
             logo: '/images/logos/vassar.png'
         }

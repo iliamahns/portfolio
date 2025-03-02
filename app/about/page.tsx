@@ -54,12 +54,9 @@ export default function About() {
                 <div className="flex gap-8 items-start">
                     <div>
                         <h1 className="text-6xl font-bold mb-6">HI, I&apos;M ILIA :)</h1>
-
                         <p className="text-lg flex-1 mb-4">
                             A blossoming designer, educator and artist who is driven by a passion for continuous learning, creative expression, and collective growth.
                         </p>
-
-          
                     </div>
                     <div className="max-w-[400px] relative">
                         <Image
@@ -73,126 +70,82 @@ export default function About() {
                 </div>
             </div>
 
-            {/* Experience Section */}
-            <div className="mb-20">
-                <h2 className="text-2xl font-bold mb-6">EXPERIENCE</h2>
-                {ABOUT_PAGE.experience.map((exp, index) => (
-                    <div key={index} className="mb-8 border-b border-gray-200 pb-8">
-                        <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 relative flex-shrink-0">
-                                <Image
-                                    src={exp.logo}
-                                    alt={`${exp.company} logo`}
-                                    width={48}
-                                    height={48}
-                                    className="object-contain w-full h-full"
-                                />
+            {/* Three Column Section */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Education Column */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-6">EDUCATION</h2>
+                    {ABOUT_PAGE.education.map((edu, index) => (
+                        <div key={index} className="mb-8">
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 relative flex-shrink-0">
+                                    <Image
+                                        src={edu.logo}
+                                        alt={`${edu.school} logo`}
+                                        width={48}
+                                        height={48}
+                                        className="object-contain w-full h-full"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-medium text-lg">{edu.school}</h3>
+                                    <p className="text-sm mb-1">
+                                        {edu.degree} • <span className="text-gray-600">{edu.period}</span>
+                                    </p>
+                                    <ul className="list-disc list-inside text-sm">
+                                        {edu.details.map((detail, i) => (
+                                            <li key={i}>{detail}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="font-medium text-lg">{exp.title}</h3>
-                                <p className="text-sm mb-1">
-                                    {exp.companyUrl ? (
-                                        <a 
-                                            href={exp.companyUrl} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="hover:underline"
-                                        >
-                                            {exp.company}
-                                        </a>
-                                    ) : exp.company}
-                                    {' • '}{exp.location}{' • '}<span className="text-gray-600">{exp.period}</span>
-                                </p>
-                                <p className="text-sm mb-2">{exp.description}</p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {/* Certifications Section */}
-            <div className="mb-20">
-                <h2 className="text-2xl font-bold mb-6">CERTIFICATIONS</h2>
-                {ABOUT_PAGE.certifications.map((cert, index) => (
-                    <div key={index} className="mb-4 flex items-center gap-4">
-                        <div className="w-10 h-10 relative flex-shrink-0">
-                            <Image
-                                src={cert.logo}
-                                alt={`${cert.issuer} logo`}
-                                width={40}
-                                height={40}
-                                className="object-contain w-full h-full"
-                            />
-                        </div>
-                        <div>
-                            <h3 className="font-medium">
-                                {cert.url ? (
-                                    <a 
-                                        href={cert.url} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        className="hover:underline"
-                                    >
-                                        {cert.name}
-                                    </a>
-                                ) : cert.name}
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                                {cert.issuer} • {cert.date}{cert.validUntil && ` - ${cert.validUntil}`}
-                            </p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {/* Education Section */}
-            <div className="mb-20">
-                <h2 className="text-2xl font-bold mb-6">EDUCATION</h2>
-                {ABOUT_PAGE.education.map((edu, index) => (
-                    <div key={index} className="mb-8 flex items-start gap-4">
-                        <div className="w-12 h-12 relative flex-shrink-0">
-                            <Image
-                                src={edu.logo}
-                                alt={`${edu.school} logo`}
-                                width={48}
-                                height={48}
-                                className="object-contain w-full h-full"
-                            />
-                        </div>
-                        <div>
-                            <h3 className="font-medium text-lg">{edu.school}</h3>
-                            <p className="text-sm mb-1">
-                                {edu.degree} • <span className="text-gray-600">{edu.period}</span>
-                            </p>
-                            <ul className="list-disc list-inside text-sm">
-                                {edu.details.map((detail, i) => (
-                                    <li key={i}>{detail}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {/* Languages Section */}
-            <div className="mb-20">
-                <h2 className="text-2xl font-bold mb-6">SKILLS</h2>
-                <SkillTabs />
-            </div>
-                   {/* Languages Section */}
-                   <div className="mb-20">
-                <h2 className="text-2xl font-bold mb-6">LANGUAGES</h2>
-                <div className="flex flex-wrap gap-4">
-                    {ABOUT_PAGE.languages.map((lang, index) => (
-                        <div key={index} className="w-[200px] bg-black/5 rounded-lg p-3">
-                            <h3 className="font-medium">{lang.name}</h3>
-                            <p className="text-sm text-gray-600">{lang.level}</p>
                         </div>
                     ))}
                 </div>
-            </div>
-                          
 
+                {/* Experience Column */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-6">EXPERIENCE</h2>
+                    {ABOUT_PAGE.experience.map((exp, index) => (
+                        <div key={index} className="mb-8">
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 relative flex-shrink-0">
+                                    <Image
+                                        src={exp.logo}
+                                        alt={`${exp.company} logo`}
+                                        width={48}
+                                        height={48}
+                                        className="object-contain w-full h-full"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-medium text-lg">{exp.title}</h3>
+                                    <p className="text-sm">
+                                        {exp.companyUrl ? (
+                                            <a 
+                                                href={exp.companyUrl} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="hover:underline"
+                                            >
+                                                {exp.company}
+                                            </a>
+                                        ) : exp.company}
+                                    </p>
+                                    <p className="text-sm text-gray-600">{exp.period}</p>
+                                    <p className="text-sm text-gray-600">{exp.location}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Skills Column */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-6">SKILLS</h2>
+                    <SkillTabs />
+                </div>
+            </div>
         </main>
     );
 } 
