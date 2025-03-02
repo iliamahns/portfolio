@@ -9,8 +9,8 @@ type InsightProps = {
 function Insight({ title, description }: InsightProps) {
   return (
     <div className="flex-1 text-center">
-      <h3 className="text-xl font-medium mb-2">{title}</h3>
-      <p className="text-gray-700">{description}</p>
+      <h3 className="text-xl font-medium mb-2 text-[#31572C]">{title}</h3>
+      <p className="text-[#31572C]">{description}</p>
     </div>
   );
 }
@@ -56,16 +56,16 @@ export default function UFOProject() {
 
         <div className="grid grid-cols-3 gap-8 text-center">
           <div>
-            <h3 className="text-xl font-medium mb-2 underline">Role</h3>
-            <p>Primary Researcher<br />and Designer</p>
+            <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Role</h3>
+            <p className="text-[#31572C]">Primary Researcher<br />and Designer</p>
           </div>
           <div>
-            <h3 className="text-xl font-medium mb-2 underline">Tool</h3>
-            <p>Figma</p>
+            <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Tool</h3>
+            <p className="text-[#31572C]">Figma</p>
           </div>
           <div>
-            <h3 className="text-xl font-medium mb-2 underline">Date</h3>
-            <p>December 2024 -<br />February 2025</p>
+            <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Date</h3>
+            <p className="text-[#31572C]">December 2024 -<br />February 2025</p>
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function UFOProject() {
 
         {/* Top Insights */}
         <div>
-          <h3 className="text-2xl font-medium mb-6 text-center">Top Insights</h3>
+          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Top Insights</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Insight
               title="Confidence"
@@ -116,7 +116,7 @@ export default function UFOProject() {
 
         {/* User Persona and Journey Map */}
         <div className="mb-12">
-          <h3 className="text-2xl font-medium text-center">User Persona and User Journey Map</h3>
+          <h3 className="text-2xl font-medium text-center text-[#31572C]">User Persona and User Journey Map</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8 max-w-6xl mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
@@ -139,7 +139,7 @@ export default function UFOProject() {
 
         {/* Storyboards */}
         <div className="mb-20">
-          <h3 className="text-2xl font-medium mb-6 text-center">Storyboards</h3>
+          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Storyboards</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
@@ -162,7 +162,7 @@ export default function UFOProject() {
 
         {/* Information Architecture */}
         <div className="mb-20">
-          <h3 className="text-2xl font-medium mb-6 text-center">Information Architecture</h3>
+          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Information Architecture</h3>
           <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
@@ -176,7 +176,7 @@ export default function UFOProject() {
         </div>
 
         {/* Platform */}
-        <div className="mb-12">
+        <div className="mb-32">
           <h2 className="text-3xl font-bold mb-6">Platform</h2>
           <p className="text-lg mb-12">
             Feeling confident about the vision of what functions this platform would showcase, I started with paper wireframes, then digital wireframes, and lo-fi prototypes.
@@ -210,6 +210,35 @@ export default function UFOProject() {
             ))}
           </div>
         </div>
+
+        {/* Usability Testing */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-6">Usability Testing</h2>
+          <p className="text-lg mb-12">
+            I conducted a moderated usability test with five global travelers in my life with the lo-fi prototypes. 
+            I gave the participant a task, observed click paths, behaviors, and any notable quotes about their 
+            experience. I iterated the design accordingly with gained insights.
+          </p>
+
+          {/* Top 3 Insights */}
+          <div>
+            <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Top 3 Insights</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Insight
+                title="1"
+                description="Based on the theme of financial balance confusion, the balance will be displayed on the homepage."
+              />
+              <Insight
+                title="2"
+                description="To counter cautiousness with the &quot;Crypto&quot; tab, investments will move into the Finances tab."
+              />
+              <Insight
+                title="3"
+                description="To make the sending money function more time efficient, the user flow will be simplified and screens will include scrolling functions."
+              />
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );
