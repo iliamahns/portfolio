@@ -239,6 +239,87 @@ export default function UFOProject() {
             </div>
           </div>
         </section>
+
+        {/* Hi-Fi Prototypes */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-6">Hi-Fi Prototypes</h2>
+          <p className="text-lg mb-12">
+            Feeling satisfied with the upgraded designs, I moved into making a sticker sheet and high fidelity prototyping.
+          </p>
+
+          {/* Sticker Sheet Images */}
+          <div className="mb-16">
+            <div className="max-w-2xl mx-auto">
+              <div className="grid grid-cols-2 gap-0">
+                <div className="flex flex-col -translate-x-8">
+                  <div className="relative aspect-[4/3] scale-110">
+                    <Image
+                      src="/images/projects/ufo/palette.png"
+                      alt="palette design"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="relative aspect-[4/3] scale-110">
+                    <Image
+                      src="/images/projects/ufo/fonts.png"
+                      alt="fonts design"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <div className="relative aspect-[4/3] scale-110">
+                    <Image
+                      src="/images/projects/ufo/components.png"
+                      alt="components design"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="relative aspect-[4/3] scale-110 translate-x-12 md:translate-x-16">
+                    <Image
+                      src="/images/projects/ufo/icons.png"
+                      alt="icons design"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p className="text-right text-gray-600 italic mt-2">Sticker Sheet</p>
+          </div>
+
+          {/* Hi-Fi Home Screen */}
+          <div className="mb-16">
+            <div className="relative aspect-[4/3] overflow-hidden max-w-[90%] md:max-w-[calc(75%-1rem)] mx-auto">
+              <Image
+                src="/images/projects/ufo/screen.png"
+                alt="Hi-Fi Home Screen"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <p className="text-center text-gray-600 italic mt-4">Hi-Fi Home Screen</p>
+          </div>
+
+          {/* Video */}
+          <div className="mb-4">
+            <div className="relative aspect-video overflow-hidden">
+              <video
+                controls
+                className="w-full h-full object-contain bg-black"
+              >
+                <source src="/videos/UFOvideo.mp4" type="video/mp4" />
+                <source src="/images/projects/ufo/UFOvideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag or the video file could not be found.
+              </video>
+            </div>
+            <p className="text-right text-gray-600 italic mt-2">Video simulating user flow for sending money</p>
+          </div>
+        </section>
       </section>
     </main>
   );
