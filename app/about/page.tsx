@@ -33,30 +33,30 @@ function SkillTabs() {
 
 export default function About() {
     return (
-        <main className="min-h-screen max-w-[1400px] mx-auto p-8">
+        <main className="min-h-screen max-w-[1400px] mx-auto p-8 mb-32">
             {/* Header Section */}
-            <div className="mt-20 mb-20">
-                <div className="flex gap-8 items-start">
-                    <div>
+            <div className="mt-20 mb-32">
+                <div className="flex flex-col md:flex-row gap-8 md:gap-4 items-center md:items-start">
+                    <div className="flex-1">
                         <h1 className="text-6xl font-bold mb-6">HI, I&apos;M ILIA :)</h1>
-                        <p className="text-lg flex-1 mb-4">
+                        <p className="text-xl max-w-[450px]">
                             A blossoming designer, educator and artist who is driven by a passion for continuous learning, creative expression, and collective growth.
                         </p>
                     </div>
-                    <div className="max-w-[400px] relative">
+                    <div className="w-[300px] md:w-[450px] relative flex-shrink-0">
                         <Image
                             src="/images/ilia.png"
                             alt="Profile"
-                            width={400}
-                            height={400}
-                            className="object-cover h-full"
+                            width={450}
+                            height={450}
+                            className="object-cover h-full w-full"
                         />
                     </div>
                 </div>
             </div>
 
             {/* Three Column Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                 {/* Education Column */}
                 <div>
                     <h2 className="text-2xl font-bold mb-6">EDUCATION</h2>
