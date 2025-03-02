@@ -1,6 +1,6 @@
 export type Skill = {
     name: string;
-    category: 'UX/UI & Prototyping' | 'Visual & Creative Design' | 'Interpersonal' | 'Education';
+    category: 'UI/UX' | 'Visual & Creative Design' | 'Interpersonal' | 'Education';
 };
 
 export type Language = {
@@ -38,15 +38,19 @@ export type Education = {
 
 export const ABOUT_PAGE = {
     skills: {
-        'UX/UI & Prototyping': [
+        'UI/UX': [
             'User-Centered Design',
             'User Research',
             'Information Architecture',
             'Wireframing',
             'Rapid Prototyping',
+            'Storyboarding',
             'Figma',
             'InDesign',
-            'Storyboarding'
+            'GitHub',
+            'Cursor AI',
+            'Web Development',
+            'Typescript'
         ],
         'Visual & Creative Design': [
             'Visual Design',

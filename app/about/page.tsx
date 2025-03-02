@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function SkillTagSmall({ name }: { name: string }) {
     return (
-        <span className="inline-block bg-[#F2F5EA] rounded-full px-3 py-1 text-sm mr-2 mb-2">
+        <span className="inline-block bg-[#F2F5EA] px-3 py-1 text-sm mr-2 mb-2">
             {name}
         </span>
     );
