@@ -117,7 +117,7 @@ export default function UFOProject() {
         {/* User Persona and Journey Map */}
         <div className="mb-12">
           <h3 className="text-2xl font-medium text-center">User Persona and User Journey Map</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8 max-w-6xl mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/projects/ufo/rafa.png"
@@ -126,7 +126,7 @@ export default function UFOProject() {
                 className="object-contain"
               />
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden mt-1 md:mt-0">
               <Image
                 src="/images/projects/ufo/persona.png"
                 alt="User Journey Map"
@@ -161,7 +161,7 @@ export default function UFOProject() {
         </div>
 
         {/* Information Architecture */}
-        <div className="mb-12">
+        <div className="mb-20">
           <h3 className="text-2xl font-medium mb-6 text-center">Information Architecture</h3>
           <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
             <div className="relative aspect-[4/3] overflow-hidden">
