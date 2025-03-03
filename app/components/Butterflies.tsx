@@ -15,13 +15,18 @@ export default function Butterflies() {
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new THREE.WebGLRenderer({ 
+      alpha: true,
+      antialias: true, // Add antialiasing for smoother edges
+      precision: 'highp' // Use high precision rendering
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio); // Match device pixel ratio for sharper rendering
     container.appendChild(renderer.domElement);
 
     // Create butterfly wing geometries with custom UV mapping
-    const leftWingGeometry = new THREE.PlaneGeometry(1, 1);
-    const rightWingGeometry = new THREE.PlaneGeometry(1, 1);
+    const leftWingGeometry = new THREE.PlaneGeometry(1, 1, 8, 8); // Add more segments for better detail
+    const rightWingGeometry = new THREE.PlaneGeometry(1, 1, 8, 8);
 
     // Modify UVs to use half of the texture each
     const leftUVs = leftWingGeometry.attributes.uv;
@@ -46,21 +51,27 @@ export default function Butterflies() {
       rightUVs.setXY(i, 0.5 + rightUVs.getX(i) * 0.5, rightUVs.getY(i));
     }
 
-    // Load texture
+    // Load texture with improved settings
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('/images/logo.png');
+    const texture = textureLoader.load('/images/logo.png', (loadedTexture) => {
+      // Apply texture settings after loading
+      loadedTexture.minFilter = THREE.LinearFilter;
+      loadedTexture.magFilter = THREE.LinearFilter;
+      loadedTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    });
+    
     const material = new THREE.MeshBasicMaterial({
       map: texture,
       transparent: true,
       side: THREE.DoubleSide,
-      alphaTest: 0.5
+      alphaTest: 0.1, // Lower alphaTest for better edge quality
     });
 
     // Create butterflies
     const butterflies: { body: THREE.Group; leftWing: THREE.Mesh; rightWing: THREE.Mesh }[] = [];
     const butterflyData: { velocity: THREE.Vector3; wingSpeed: number }[] = [];
     
-    for (let i = 0; i < 12; i++) {  // Changed from 19 to 12 butterflies
+    for (let i = 0; i < 12; i++) {
       const butterflyGroup = new THREE.Group();
       
       // Create wings with different geometries
@@ -71,8 +82,10 @@ export default function Butterflies() {
       leftWing.position.set(0, 0, 0);
       rightWing.position.set(0, 0, 0);
       
-      leftWing.scale.set(0.75, 0.75, 0.75);
-      rightWing.scale.set(0.75, 0.75, 0.75);
+      // Use smaller scale but keep slight variation for natural look
+      const scale = 0.75 + Math.random() * 0.15; // Smaller scale with slight variation
+      leftWing.scale.set(scale, scale, scale);
+      rightWing.scale.set(scale, scale, scale);
       
       butterflyGroup.add(leftWing);
       butterflyGroup.add(rightWing);
@@ -161,6 +174,7 @@ export default function Butterflies() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
     }
     window.addEventListener('resize', handleResize);
 
