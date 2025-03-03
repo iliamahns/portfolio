@@ -74,7 +74,10 @@ export default function About() {
                                 <div>
                                     <h3 className="font-medium text-lg">{edu.school}</h3>
                                     <p className="text-sm mb-1">
-                                        {edu.degree} • <span>{edu.period}</span>
+                                        {edu.degree}
+                                    </p>
+                                    <p className="text-sm mb-1">
+                                        {edu.period}
                                     </p>
                                     {edu.details.map((detail, i) => (
                                         <p key={i} className="text-sm text-gray-600">{detail}</p>

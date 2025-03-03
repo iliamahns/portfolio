@@ -38,40 +38,43 @@ export type Education = {
 
 export const ABOUT_PAGE = {
     skills: {
-        'UI/UX': [
+        'Digital Design Tools': [
+            'Figma',
+            'GitHub',
+            'Cursor AI',
+            'Adobe InDesign',
+            'Google Slides'
+        ],
+        'UI/UX Design': [
             'User-Centered Design',
             'User Research',
+            'Storyboarding',
             'Information Architecture',
             'Wireframing',
             'Rapid Prototyping',
-            'Storyboarding',
-            'Figma',
-            'InDesign',
-            'GitHub',
-            'Cursor AI',
+            'Visual Design',
             'Web Development',
             'Typescript'
         ],
-        'Visual & Creative Design': [
-            'Visual Design',
+        'Creative & Educational Expertise': [
             'Creative Expression',
-            'Photography',
-            'Floristry',
-            'Mixed Media Art'
-        ],
-        'Interpersonal': [
-            'Cross-Cultural Communication',
-            'Team Leadership',
-            'Public Speaking',
-            'Trauma-informed Care',
-            'Conflict Resolution'
-        ],
-        'Education': [
-            'Curriculum Development',
+            'Education',
             'Lesson Planning',
+            'Curriculum Building',
             'Literacy Learning',
             'English Language Learning',
-            'Student Assessment'
+            'Trauma-Informed Care',
+            'Cross-Cultural Communication',
+            'Conflict Resolution',
+            'Team Leadership',
+            'Mixed Media Arts',
+            'Photography',
+            'Floristry'
+        ],
+        'Language and Safety': [
+            'Proficient Spanish',
+            'Basic Japanese',
+            'First Aid/Lifeguard Certified'
         ]
     },
 
