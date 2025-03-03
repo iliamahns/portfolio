@@ -38,13 +38,6 @@ export type Education = {
 
 export const ABOUT_PAGE = {
     skills: {
-        'Digital Design Tools': [
-            'Figma',
-            'GitHub',
-            'Cursor AI',
-            'Adobe InDesign',
-            'Google Slides'
-        ],
         'UI/UX Design': [
             'User-Centered Design',
             'User Research',
@@ -55,6 +48,13 @@ export const ABOUT_PAGE = {
             'Visual Design',
             'Web Development',
             'Typescript'
+        ],
+        'Digital Design Tools': [
+            'Figma',
+            'GitHub',
+            'Cursor AI',
+            'Adobe InDesign',
+            'Google Slides'
         ],
         'Creative & Educational Expertise': [
             'Creative Expression',
