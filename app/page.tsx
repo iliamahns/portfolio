@@ -11,7 +11,7 @@ export default function Home() {
           <h2 className="text-2xl">UX Designer and Visual Creative</h2>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto w-full justify-items-center">
           <HolographicButton
             href="/ux"
             text="UX"

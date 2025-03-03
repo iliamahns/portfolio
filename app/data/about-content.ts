@@ -71,7 +71,7 @@ export const ABOUT_PAGE = {
             'Photography',
             'Floristry'
         ],
-        'Language and Safety': [
+        'Language & Safety': [
             'Proficient Spanish',
             'Basic Japanese',
             'First Aid/Lifeguard Certified'
