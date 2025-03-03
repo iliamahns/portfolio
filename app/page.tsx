@@ -1,9 +1,17 @@
 import HolographicButton from './components/HolographicButton';
 import Butterflies from './components/Butterflies';
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <main className="min-h-screen p-8 flex flex-col items-center">
+       <Head>
+        <title>ILIA MAHNS</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
+      {/* <Head>
+        <meta property="og:title" content="My new title" key="title" />
+      </Head> */}
       <div className="flex-1 flex flex-col items-center justify-center min-h-[600px]">
         <Butterflies />
         <div className="text-center mb-12">
