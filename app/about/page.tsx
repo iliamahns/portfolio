@@ -1,7 +1,6 @@
 'use client';
 
 import { ABOUT_PAGE } from '../data/about-content';
-import { useState } from 'react';
 import Image from 'next/image';
 
 function SkillTagSmall({ name }: { name: string }) {

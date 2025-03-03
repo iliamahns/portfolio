@@ -9,12 +9,15 @@ export default function Butterflies() {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // Store ref value
+    const container = containerRef.current;
+
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     // Create butterfly wing geometries with custom UV mapping
     const leftWingGeometry = new THREE.PlaneGeometry(1, 1);
@@ -164,7 +167,7 @@ export default function Butterflies() {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      containerRef.current?.removeChild(renderer.domElement);
+      container?.removeChild(renderer.domElement);
       leftWingGeometry.dispose();
       rightWingGeometry.dispose();
       material.dispose();
