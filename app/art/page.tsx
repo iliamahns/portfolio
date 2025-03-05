@@ -35,7 +35,7 @@ function ArtSection({ title, id, items, onImageSelect }: ArtSectionProps) {
       */}
             <h2 className="text-2xl font-bold mb-16 md:hidden bg-[#D8E1C3] p-4 w-full">{title}</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
                 {items.map((item, index) => (
                     <div
                         key={index}
