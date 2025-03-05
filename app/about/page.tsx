@@ -39,7 +39,7 @@ export default function About() {
                     <div className="flex-1">
                         <h1 className="text-6xl font-bold mb-6">HI, I&apos;M ILIA :)</h1>
                         <p className="text-xl max-w-[450px]">
-                            A blossoming designer, educator and artist who is driven by a passion for continuous learning, creative expression, and collective growth.
+                            A blossoming designer, educator, and artist who is driven by a passion for continuous learning, creative expression, and collective growth.
                         </p>
                     </div>
                     <div className="w-[300px] md:w-[450px] relative flex-shrink-0">
