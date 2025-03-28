@@ -2,6 +2,8 @@
 
 import { ABOUT_PAGE } from '../data/about-content';
 import Image from 'next/image';
+import { useState } from 'react';
+import ImagePopup from '../components/ImagePopup';
 
 function SkillTagSmall({ name }: { name: string }) {
     return (
@@ -31,6 +33,20 @@ function SkillTabs() {
 }
 
 export default function About() {
+    const [certificateImage, setCertificateImage] = useState<{
+        path: string;
+        title: string;
+        caption: string;
+    } | null>(null);
+
+    const handleShowCertificate = () => {
+        setCertificateImage({
+            path: '/images/logos/uxcert.jpg',
+            title: 'Google UX Design Professional Certificate',
+            caption: 'Google UX Design Certificate',
+        });
+    };
+
     return (
         <main className="min-h-screen max-w-[1400px] mx-auto p-8 mb-32">
             {/* Header Section */}
@@ -74,7 +90,19 @@ export default function About() {
                                 <div>
                                     <h3 className="font-medium text-lg">{edu.school}</h3>
                                     <p className="text-sm mb-1">
-                                        {edu.degree}
+                                        {edu.school === 'Google UX Design Course' ? (
+                                            <>
+                                                <a 
+                                                    onClick={handleShowCertificate}
+                                                    className="cursor-pointer hover:underline inline-flex items-center"
+                                                >
+                                                    Professional Certificate
+                                                    <span className="ml-1 text-xs">↗</span>
+                                                </a>
+                                            </>
+                                        ) : (
+                                            edu.degree
+                                        )}
                                     </p>
                                     <p className="text-sm mb-1">
                                         {edu.period}
@@ -131,6 +159,12 @@ export default function About() {
                     <SkillTabs />
                 </div>
             </div>
+
+            {/* Certificate Image Popup */}
+            <ImagePopup 
+                image={certificateImage} 
+                onClose={() => setCertificateImage(null)} 
+            />
         </main>
     );
 } 
