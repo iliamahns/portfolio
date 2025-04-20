@@ -114,8 +114,22 @@ export default function WebsiteProject() {
           and one for mobile screens (iPhone 14 & 15 Pro). My designs continued from 
           paper wireframes into digital wireframes, low-fidelity prototypes, and high-fidelity prototypes.
         </p>
-        <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
-          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/projects/web/digitalweb.png"
+              alt="Digital wireframe design for portfolio website"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/projects/web/hifiweb.png"
+              alt="High-fidelity prototype design for portfolio website"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </section>
