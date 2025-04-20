@@ -180,11 +180,8 @@ export default function WebsiteProject() {
         <p className="text-lg mb-12 max-w-3xl mx-auto">
           Creating my portfolio website was both a creative and technical challenge that allowed me to 
           showcase my work while also demonstrating my design and development skills. The process of 
-          building this site has given me a deeper appreciation for user experience design in digital 
+          building this site has given me a deeper appreciation for UX design in digital 
           spaces and has provided me with a platform that I can continue to evolve as my career grows.
-        </p>
-        <p className="text-lg italic text-center text-[#31572C]">
-          "This website itself is a testament to my journey as a designer and creator."
         </p>
       </section>
     </main>
