@@ -110,9 +110,56 @@ export default function WebsiteProject() {
         </div>
       </section>
 
+      {/* Platform */}
+      <section className="mb-32">
+        <h2 className="text-3xl font-bold mb-6">Platform</h2>
+        <p className="text-lg mb-12">
+          The portfolio website was designed primarily for desktop viewing, with responsive considerations 
+          for mobile and tablet users. I chose a web-based platform to ensure maximum accessibility across 
+          devices and to demonstrate my web development skills. The platform choice allowed for rich media 
+          integration and interactive elements that showcase my work effectively.
+        </p>
+        <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
+          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+          </div>
+        </div>
+      </section>
+
+      {/* Usability Testing */}
+      <section className="mb-32">
+        <h2 className="text-3xl font-bold mb-6">Usability Testing</h2>
+        <p className="text-lg mb-12">
+          To ensure the website met user expectations, I conducted usability testing with a diverse 
+          group of testers including designers, potential employers, and general users. Feedback was 
+          collected on navigation intuitiveness, content clarity, and overall user experience. The testing 
+          revealed insights that led to several refinements in the navigation and content organization.
+        </p>
+        <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
+          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+          </div>
+        </div>
+      </section>
+
+      {/* Hi-Fi Prototypes */}
+      <section className="mb-32">
+        <h2 className="text-3xl font-bold mb-6">Hi-Fi Prototypes</h2>
+        <p className="text-lg mb-12">
+          Before implementation, high-fidelity prototypes were created in Figma to visualize the 
+          complete user interface and interaction flow. These prototypes allowed for testing of color 
+          schemes, typography, and layout variations to determine the most effective design. The prototyping 
+          process was crucial for identifying potential issues early and ensuring a polished final product.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+          </div>
+        </div>
+      </section>
+
       {/* Implementation */}
       <section className="mb-32">
-        <h2 className="text-3xl font-bold mb-6">Implementation</h2>
+        <h2 className="text-3xl font-bold mb-6">Implementation & Development</h2>
         <p className="text-lg mb-12">
           I chose to build this site using Next.js and Tailwind CSS, modern web technologies that 
           allowed for a responsive, fast-loading experience. The development process involved 
