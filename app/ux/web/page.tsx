@@ -167,7 +167,7 @@ export default function WebsiteProject() {
       <section className="mb-32 text-center">
         <h2 className="text-3xl font-bold mb-6">Lessons Learned</h2>
         <p className="text-lg mb-12 max-w-3xl mx-auto">
-          This project taught me valuable lessons about balancing aesthetics with functionality, 
+          This project taught me valuable lessons about balancing artistic aesthetics with functionality, 
           the importance of iterative design, and the technical aspects of modern web development. 
           I gained insights into creating a cohesive user experience across different sections of a 
           website while maintaining a consistent theme and navigation structure.
