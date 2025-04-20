@@ -80,30 +80,25 @@ export default function WebsiteProject() {
           Creating the User Persona, Storyboards, anditerations of the Information Architecture helped polish and articulate my vision of the kind of user flow I wanted to create.
         </p>
 
-        {/* User Persona */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-medium text-center text-[#31572C]">User Persona</h3>
-          <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
+        {/* Research Elements in a Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* User Persona */}
+          <div>
+            <h3 className="text-2xl font-medium text-center mb-4 text-[#31572C]">User Persona</h3>
             <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
             </div>
           </div>
-        </div>
 
-        {/* Storyboards */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Storyboards</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-            </div>
+          {/* Storyboards */}
+          <div>
+            <h3 className="text-2xl font-medium text-center mb-4 text-[#31572C]">Storyboards</h3>
             <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
             </div>
           </div>
-        </div>
 
-        {/* Information Architecture */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Information Architecture</h3>
-          <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
+          {/* Information Architecture */}
+          <div>
+            <h3 className="text-2xl font-medium text-center mb-4 text-[#31572C]">Information Architecture</h3>
             <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
             </div>
           </div>
