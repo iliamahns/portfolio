@@ -114,10 +114,10 @@ export default function WebsiteProject() {
       <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Platform</h2>
         <p className="text-lg mb-12">
-          The portfolio website was designed primarily for desktop viewing, with responsive considerations 
-          for mobile and tablet users. I chose a web-based platform to ensure maximum accessibility across 
-          devices and to demonstrate my web development skills. The platform choice allowed for rich media 
-          integration and interactive elements that showcase my work effectively.
+          To ensure maximum accessibility across devices and to demonstrate my web development skills, 
+          I used responsive web design, incorporating two design types, one for desktop screens (MacBook Air 13 inch) 
+          and one for mobile screens (iPhone 14 & 15 Pro). My designs continued from 
+          paper wireframes into digital wireframes, low-fidelity prototypes, and high-fidelity prototypes.
         </p>
         <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
           <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
@@ -129,42 +129,22 @@ export default function WebsiteProject() {
       <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Usability Testing</h2>
         <p className="text-lg mb-12">
-          To ensure the website met user expectations, I conducted usability testing with a diverse 
-          group of testers including designers, potential employers, and general users. Feedback was 
-          collected on navigation intuitiveness, content clarity, and overall user experience. The testing 
-          revealed insights that led to several refinements in the navigation and content organization.
+          To ensure the website was accessible, authentic, and effective, I asked my friends, family, and other UX designers 
+          to navigate my website throughout iterations of my designs. Feedback was collected on navigation intuitiveness, 
+          content clarity, overall user experience, and aesthetic appeal. The testing revealed insights that led to 
+          several refinements in the navigation and content organization.
         </p>
-        <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
-          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-          </div>
-        </div>
-      </section>
-
-      {/* Hi-Fi Prototypes */}
-      <section className="mb-32">
-        <h2 className="text-3xl font-bold mb-6">Hi-Fi Prototypes</h2>
-        <p className="text-lg mb-12">
-          Before implementation, high-fidelity prototypes were created in Figma to visualize the 
-          complete user interface and interaction flow. These prototypes allowed for testing of color 
-          schemes, typography, and layout variations to determine the most effective design. The prototyping 
-          process was crucial for identifying potential issues early and ensuring a polished final product.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-          </div>
-        </div>
       </section>
 
       {/* Implementation */}
       <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Implementation & Development</h2>
         <p className="text-lg mb-12">
-          I chose to build this site using Next.js and Tailwind CSS, modern web technologies that 
-          allowed for a responsive, fast-loading experience. The development process involved 
-          learning these technologies while implementing the design, resulting in both technical 
-          growth and a polished final product.
+          I had been curious about the software developing side of UX Design so I decided to learn how to build and develop this site.
+          This was also motivated by the desire to cultivate future personal projecst and collaborations with web developers.
+          By using Cursor AI, I learned some functionalities of Next.js and Tailwind CSS, and was able to create a responsive and accessible experience.
+          The development process involved learning these technologies while implementing the design, testing and iterating designs, through the local host,
+          resulting in both technical growth and an authentic revisable personal website. :)
         </p>
 
         {/* Key Features */}
@@ -192,9 +172,9 @@ export default function WebsiteProject() {
       </section>
 
       {/* Lessons Learned */}
-      <section className="mb-32">
+      <section className="mb-32 text-center">
         <h2 className="text-3xl font-bold mb-6">Lessons Learned</h2>
-        <p className="text-lg mb-12">
+        <p className="text-lg mb-12 max-w-3xl mx-auto">
           This project taught me valuable lessons about balancing aesthetics with functionality, 
           the importance of iterative design, and the technical aspects of modern web development. 
           I gained insights into creating a cohesive user experience across different sections of a 
@@ -221,9 +201,9 @@ export default function WebsiteProject() {
       </section>
 
       {/* Conclusion */}
-      <section className="mb-32">
+      <section className="mb-32 text-center">
         <h2 className="text-3xl font-bold mb-6">Conclusion</h2>
-        <p className="text-lg mb-12">
+        <p className="text-lg mb-12 max-w-3xl mx-auto">
           Creating my portfolio website was both a creative and technical challenge that allowed me to 
           showcase my work while also demonstrating my design and development skills. The process of 
           building this site has given me a deeper appreciation for user experience design in digital 
