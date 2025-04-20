@@ -145,7 +145,7 @@ export default function WebsiteProject() {
         {/* Key Features */}
         <div className="mb-24">
           <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Key Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <Insight
               title="Personally Designed Iconography"
               description="I was able to use personal artistic designs as icons for the different sections of the website."
@@ -158,10 +158,6 @@ export default function WebsiteProject() {
             <Insight
               title="Responsive Design"
               description="A fully responsive layout that adapts to various screen sizes from mobile phones to large desktop displays."
-            />
-            <Insight
-              title="Performance"
-              description="Optimized images and code to ensure fast loading times and smooth interactions across all devices."
             />
           </div>
         </div>
