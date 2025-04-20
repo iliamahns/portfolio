@@ -57,7 +57,7 @@ export default function UFOProject() {
         <div className="grid grid-cols-3 gap-8 text-center">
           <div>
             <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Role</h3>
-            <p className="text-[#31572C]">Primary Researcher<br />and Designer</p>
+            <p className="text-[#31572C]">Primary UX Researcher<br />and Designer</p>
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Tool</h3>
