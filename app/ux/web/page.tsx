@@ -147,12 +147,13 @@ export default function WebsiteProject() {
           <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Key Features</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Insight
-              title="Portfolio Sections"
-              description="Dedicated areas for UX work, art pieces, and personal information, each with appropriate layouts for the content type."
+              title="Personally Designed Iconography"
+              description="I was able to use personal artistic designs as icons for the different sections of the website."
             />
             <Insight
               title="Interactive Elements"
-              description="Hover states, animations, and image popups that enhance the user experience without being distracting."
+              description="Engaging hover states, animations, and image popups that enhance the user experience. 
+              The 3D butterfly animation on the homepage was a fun addition to the website that was also a fun surprise learning experience for three.js."
             />
             <Insight
               title="Responsive Design"
