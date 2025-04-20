@@ -27,8 +27,8 @@ export default function WebsiteProject() {
       </Link>
 
       {/* Project Header */}
-      <div className="mb-16">
-        <h1 className="text-5xl font-bold mb-2">My Website | Personal Portfolio</h1>
+      <div className="mb-16 text-center">
+        <h1 className="text-4xl font-bold mb-2">My Website | Personal Portfolio</h1>
         <h2 className="text-2xl text-gray-600">A Digital Expression of My Work and Identity</h2>
       </div>
 

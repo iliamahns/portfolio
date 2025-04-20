@@ -27,8 +27,8 @@ export default function UFOProject() {
       </Link>
 
       {/* Project Header */}
-      <div className="mb-16">
-        <h1 className="text-5xl font-bold mb-2">UFO | Currency Exchange Platform</h1>
+      <div className="mb-16 text-center">
+        <h1 className="text-4xl font-bold mb-2">UFO | Currency Exchange Platform</h1>
         <h2 className="text-2xl text-gray-600">The Currency Connection</h2>
       </div>
 
