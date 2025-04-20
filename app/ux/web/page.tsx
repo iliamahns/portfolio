@@ -29,7 +29,7 @@ export default function WebsiteProject() {
       {/* Project Header */}
       <div className="mb-16 text-center">
         <h1 className="text-4xl font-bold mb-2">My Website | Personal Portfolio</h1>
-        <h2 className="text-2xl text-gray-600">A Digital Expression of My Work and Identity</h2>
+        <h2 className="text-2xl text-gray-600">A Personal Digital Creation of My Work</h2>
       </div>
 
       {/* Project Logo/Hero */}
@@ -48,10 +48,10 @@ export default function WebsiteProject() {
       <section className="mb-32">
         <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
         <p className="text-lg mb-12">
-          This project represents my journey into creating a personal portfolio website to showcase 
-          my work in UX design, art, and other creative endeavors. The goal was to create a clean, 
+          This project represents my journey of creating a personal portfolio website to showcase 
+          my work in UX design, art, and other professional endeavors. The goal was to create an authentic, 
           user-friendly platform that effectively communicates my skills, experiences, and personality 
-          while providing an enjoyable browsing experience for visitors.
+          while providing an enjoyable artistic navigation experience.
         </p>
 
         <div className="grid grid-cols-3 gap-8 text-center">
