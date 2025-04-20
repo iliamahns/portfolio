@@ -45,9 +45,9 @@ export default function WebsiteProject() {
       </div>
 
       {/* Project Overview */}
-      <section className="mb-32">
+      <section className="mb-32 text-center">
         <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-        <p className="text-lg mb-12">
+        <p className="text-lg mb-12 max-w-3xl mx-auto">
           This project represents my journey of creating a personal portfolio website to showcase 
           my work in UX design, art, and other professional endeavors. The goal was to create an authentic, 
           user-friendly platform that effectively communicates my skills, experiences, and personality 
@@ -72,12 +72,12 @@ export default function WebsiteProject() {
 
       {/* Design Process */}
       <section className="mb-32">
-        <h2 className="text-3xl font-bold mb-6">Design Process</h2>
+        <h2 className="text-3xl font-bold mb-6">Research & Design Process</h2>
         <p className="text-lg mb-12">
-          The design process for my portfolio website began with research into effective portfolio 
-          designs, identifying key user needs, and determining the most effective way to present my 
-          work. I wanted to create a site that was both aesthetically pleasing and highly functional, 
-          allowing visitors to easily navigate through different sections of my work.
+          The design process for my portfolio website began with research into effective and accessible UX portfolio 
+          designs, learning about the design of a case study, and determining the most authentic way to present my 
+          work. An important part of the designing was self-reflection and integrating my artistic flow into this digital medium.
+          Creating the User Persona, Storyboards, and iterations of the Information Architecture helped polish and articulate my vision of the kind of user flow I wanted to create.
         </p>
 
         {/* Design Goals */}

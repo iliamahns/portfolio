@@ -45,9 +45,9 @@ export default function UFOProject() {
       </div>
 
       {/* Project Overview */}
-      <section className="mb-32">
+      <section className="mb-32 text-center">
         <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-        <p className="text-lg mb-12">
+        <p className="text-lg mb-12 max-w-3xl mx-auto">
           This was my first UX Design project completed alongside the Google UX Design 7 course 
           program and I was tasked to build a platform that helps global travelers find current 
           exchange rates between currencies and exchange currencies. I worked on this alone as the 
@@ -57,7 +57,7 @@ export default function UFOProject() {
         <div className="grid grid-cols-3 gap-8 text-center">
           <div>
             <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Role</h3>
-            <p className="text-[#31572C]">Primary UX Researcher<br />and Designer</p>
+            <p className="text-[#31572C]">Primary UX Researcher<br />& Designer</p>
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Tool</h3>
