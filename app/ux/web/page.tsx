@@ -77,25 +77,35 @@ export default function WebsiteProject() {
           The design process for my portfolio website began with research into effective and accessible UX portfolio 
           designs, learning about the design of a case study, and determining the most authentic way to present my 
           work. An important part of the designing was self-reflection and integrating my artistic flow into this digital medium.
-          Creating the User Persona, Storyboards, and iterations of the Information Architecture helped polish and articulate my vision of the kind of user flow I wanted to create.
+          Creating the User Persona, Storyboards, anditerations of the Information Architecture helped polish and articulate my vision of the kind of user flow I wanted to create.
         </p>
 
-        {/* Design Goals */}
-        <div className="mb-24">
-          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Design Goals</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Insight
-              title="Simplicity"
-              description="Create a clean, minimalist design that puts the focus on my work while maintaining visual interest through thoughtful design elements."
-            />
-            <Insight
-              title="Accessibility"
-              description="Ensure the website is accessible to all users, with responsive design that works well across all device sizes and screen types."
-            />
-            <Insight
-              title="Personality"
-              description="Infuse the site with elements of my personality and creative style while maintaining professional presentation of my work."
-            />
+        {/* User Persona */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-medium text-center text-[#31572C]">User Persona</h3>
+          <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
+            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+            </div>
+          </div>
+        </div>
+
+        {/* Storyboards */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Storyboards</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+            </div>
+          </div>
+        </div>
+
+        {/* Information Architecture */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Information Architecture</h3>
+          <div className="max-w-[90%] md:max-w-[calc(50%-1rem)] mx-auto">
+            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+            </div>
           </div>
         </div>
       </section>
