@@ -172,24 +172,6 @@ export default function WebsiteProject() {
           I gained insights into creating a cohesive user experience across different sections of a 
           website while maintaining a consistent theme and navigation structure.
         </p>
-
-        <div className="mb-12">
-          <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Key Takeaways</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Insight
-              title="User-Centered Design"
-              description="Putting myself in the shoes of potential visitors helped me create a more intuitive navigation and content structure."
-            />
-            <Insight
-              title="Technical Growth"
-              description="Learning and implementing new technologies expanded my skill set and gave me confidence in tackling complex development challenges."
-            />
-            <Insight
-              title="Iterative Process"
-              description="The value of continuous refinement based on feedback and testing, leading to improvements throughout the design and development process."
-            />
-          </div>
-        </div>
       </section>
 
       {/* Conclusion */}
