@@ -61,11 +61,11 @@ export default function WebsiteProject() {
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Tool</h3>
-            <p className="text-[#31572C]">Next.js<br />Tailwind CSS</p>
+            <p className="text-[#31572C]">Figma<br />Cursor AI<br />GitHub<br />Tailwind CSS</p>
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2 underline text-[#31572C]">Date</h3>
-            <p className="text-[#31572C]">Spring 2025</p>
+            <p className="text-[#31572C]">February 2025</p>
           </div>
         </div>
       </section>
