@@ -87,22 +87,40 @@ export default function WebsiteProject() {
             {/* User Persona */}
             <div>
               <h3 className="text-2xl font-medium text-center mb-4 text-[#31572C]">User Persona</h3>
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+              <div className="relative aspect-[4/3] overflow-hidden flex items-center justify-center">
+                <Image
+                  src="/images/projects/web/nour.png"
+                  alt="User Persona for portfolio website"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
 
             {/* Storyboard */}
             <div>
               <h3 className="text-2xl font-medium text-center mb-4 text-[#31572C]">Storyboard</h3>
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+              <div className="relative aspect-[4/3] overflow-hidden flex items-center justify-center">
+                <Image
+                  src="/images/projects/web/webbig.png"
+                  alt="Storyboard for portfolio website"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
 
           {/* Information Architecture in row below */}
-          <div className="max-w-[80%] mx-auto">
+          <div className="max-w-4xl mx-auto md:w-1/2 md:mx-auto">
             <h3 className="text-2xl font-medium text-center mb-4 text-[#31572C]">Information Architecture</h3>
-            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 flex items-center justify-center p-4">
+            <div className="relative aspect-[4/3] overflow-hidden flex items-center justify-center">
+              <Image
+                src="/images/projects/web/webia.png"
+                alt="Information Architecture for portfolio website"
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
         </div>
