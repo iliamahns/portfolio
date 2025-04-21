@@ -77,7 +77,7 @@ export default function WebsiteProject() {
           The design process for my portfolio website began with research into effective and accessible UX portfolio 
           designs, learning about the design of a case study, and determining the most authentic way to present my 
           work. An important part of the designing was self-reflection and integrating my artistic flow into this digital medium.
-          Creating the User Persona, Storyboards, anditerations of the Information Architecture helped polish and articulate my vision of the kind of user flow I wanted to create.
+          Creating the User Persona, Storyboards, and iterations of the Information Architecture helped polish and articulate my vision of the kind of user flow I wanted to create.
         </p>
 
         {/* Research Elements in a Row */}
