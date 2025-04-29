@@ -63,6 +63,28 @@ export default function UX() {
             </div>
           </Link>
         </div>
+
+        {/* Garden Project */}
+        <div className="group w-full">
+          <Link href="/ux/garden" className="block">
+            <div className="relative aspect-square w-full overflow-hidden bg-gray-100">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image
+                  src="/images/projects/garden/home.png"
+                  alt="Garden"
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                {/* Overlay with title that appears on hover */}
+                <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-90 transition-opacity flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
+                  <h2 className="text-2xl md:text-3xl font-bold text-black mb-2">Garden</h2>
+                  <h3 className="text-lg md:text-xl text-black">Plant Care Platform</h3>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
       </div>
     </main>
   );
