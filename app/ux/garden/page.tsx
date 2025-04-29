@@ -161,149 +161,86 @@ export default function GardenProject() {
         <div className="mb-32">
           <h2 className="text-3xl font-bold mb-6">Platform</h2>
           <p className="text-lg mb-12">
-            Starting with paper wireframes, I moved through digital wireframes and low-fidelity prototypes 
-            to create a mobile-first design that would be accessible and intuitive for users.
+            Starting with paper wireframes, I moved through digital wireframes, low-fidelity prototypes, into a branding sticker sheet and mockup of the platform. 
+            The goal was to create a mobile-first design that would be accessible and intuitive for users.
           </p>
           
-          {/* Paper Wireframes */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mb-4">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={`paper-${num}`} className="relative aspect-[3/4] overflow-hidden">
+          {/* Wireframes and High-Fidelity Screens */}
+          <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <div className="space-y-8">
+              <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src={`/images/projects/garden/lf${num}.png`}
-                  alt={`Paper Wireframe ${num}`}
+                  src="/images/projects/garden/lf1.png"
+                  alt="Low-Fidelity Wireframe 1"
                   fill
                   className="object-contain"
                   quality={100}
                 />
               </div>
-            ))}
-          </div>
-
-          {/* Digital Wireframes */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={`digital-${num}`} className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src={`/images/projects/garden/hf${num}.png`}
-                  alt={`Digital Wireframe ${num}`}
+                  src="/images/projects/garden/lf2.png"
+                  alt="Low-Fidelity Wireframe 2"
                   fill
                   className="object-contain"
                   quality={100}
                 />
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Usability Testing */}
-        <section className="mb-32">
-          <h2 className="text-3xl font-bold mb-6">Usability Testing</h2>
-          <p className="text-lg mb-12">
-            I conducted moderated usability tests with five floral design enthusiasts to gather feedback 
-            on the low-fidelity prototypes. The insights gained helped refine the design and improve 
-            the user experience.
-          </p>
-
-          {/* Top 3 Insights */}
-          <div>
-            <h3 className="text-2xl font-medium mb-6 text-center text-[#31572C]">Top 3 Insights</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Insight
-                title="1"
-                description="Users wanted a more prominent search function to find specific floral arrangements."
-              />
-              <Insight
-                title="2"
-                description="The tutorial section needed clearer categorization by skill level and season."
-              />
-              <Insight
-                title="3"
-                description="The community features should include more interactive elements for feedback."
-              />
+            </div>
+            <div className="space-y-8">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/projects/garden/hf1.png"
+                  alt="High-Fidelity Screen 1"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                />
+              </div>
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/projects/garden/hf2.png"
+                  alt="High-Fidelity Screen 2"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                />
+              </div>
             </div>
           </div>
-        </section>
 
-        {/* Hi-Fi Prototypes */}
-        <section className="mb-32">
-          <h2 className="text-3xl font-bold mb-6">Hi-Fi Prototypes</h2>
-          <p className="text-lg mb-12">
-            Based on the usability testing feedback, I created high-fidelity prototypes that incorporated 
-            the necessary improvements and maintained a cohesive design system.
-          </p>
-
-          {/* Sticker Sheet Images */}
+          {/* Design System */}
           <div className="mb-16">
-            <div className="max-w-2xl mx-auto">
-              <div className="grid grid-cols-2 gap-0">
-                <div className="flex flex-col -translate-x-8">
-                  <div className="relative aspect-[4/3] scale-110">
-                    <Image
-                      src="/images/projects/garden/colorsss.png"
-                      alt="Color palette design"
-                      fill
-                      className="object-contain"
-                      quality={100}
-                    />
-                  </div>
-                  <div className="relative aspect-[4/3] scale-110">
-                    <Image
-                      src="/images/projects/garden/typ.png"
-                      alt="Typography design"
-                      fill
-                      className="object-contain"
-                      quality={100}
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <div className="relative aspect-[4/3] scale-110">
-                    <Image
-                      src="/images/projects/garden/iconsss.png"
-                      alt="Icons design"
-                      fill
-                      className="object-contain"
-                      quality={100}
-                    />
-                  </div>
-                </div>
+            <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/projects/garden/typ.png"
+                  alt="Typography design"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/projects/garden/colorsss.png"
+                  alt="Color palette design"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/projects/garden/iconsss.png"
+                  alt="Icons design"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                />
               </div>
             </div>
             <p className="text-right text-gray-600 italic mt-2">Design System</p>
-          </div>
-
-          {/* Hi-Fi Screens */}
-          <div className="mb-16">
-            <div className="relative aspect-[4/3] overflow-hidden max-w-[90%] md:max-w-[calc(75%-1rem)] mx-auto">
-              <Image
-                src="/images/projects/garden/hf1.png"
-                alt="Hi-Fi Screen"
-                fill
-                className="object-contain"
-                quality={100}
-              />
-            </div>
-            <p className="text-center text-gray-600 italic mt-4">Hi-Fi Screen</p>
-          </div>
-        </section>
-
-        {/* Accessibility Considerations */}
-        <div className="mb-32">
-          <h2 className="text-3xl font-bold mb-6 text-center">Accessibility Considerations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Insight
-              title="Color"
-              description="Utilized color blindness simulators to ensure the color palette is accessible to all users."
-            />
-            <Insight
-              title="Text To Speech"
-              description="Each icon and image includes descriptive alt text for screen readers."
-            />
-            <Insight
-              title="Navigation"
-              description="Clear and consistent navigation patterns throughout the platform."
-            />
           </div>
         </div>
 
