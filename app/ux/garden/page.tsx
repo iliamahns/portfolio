@@ -251,12 +251,13 @@ export default function GardenProject() {
             <p className="text-lg text-center mb-8">
               This project taught me the importance of understanding user needs in creative spaces and how to 
               design solutions that inspire and support artistic expression. The process of creating a floral 
-              creation library highlighted the value of combining practical functionality with an engaging user experience.
+              creation library highlighted the value of combining practical functionality with an engaging simplistic user experience.
             </p>
             <p className="text-lg text-center">
               I am grateful for the opportunity to design a platform that brings together floral enthusiasts 
-              and helps them grow in their craft. The insights gained from user research and testing have 
-              been invaluable in creating a more intuitive and inspiring platform.
+              and helps them grow in their craft. This project was inspired by my mother who has begun to spend more time creating floral arrangements. 
+              The insights gained from user research and testing have 
+              been invaluable in creating more intuitive and inspiring platforms and I plan on launching a responsive website for Garden!
             </p>
           </div>
         </div>
