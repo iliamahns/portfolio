@@ -77,7 +77,7 @@ export default function GardenProject() {
         <p className="text-lg mb-12">
           The design process began with understanding the needs of floral arrangement creators, hobbyists, and enthusiasts. 
           Through user research and a competitive audit, I better understand the gaps in the market: 
-          There wasn't really a platform that fully satisfied the emotional, creative, and archival needs of hobbyist flower arrangers 
+          There wasn&apos;t really a platform that fully satisfied the emotional, creative, and archival needs of hobbyist flower arrangers 
           who want to express, reflect, and preserve their work - not just showcase it or sell it.
         </p>
 
