@@ -9,7 +9,7 @@ interface ImagePopupProps {
     path: string;
     title: string;
     caption: string;
-    slug: string;
+    slug?: string;
   } | null;
   onClose: () => void;
 }
@@ -38,13 +38,15 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
 
   useEffect(() => {
     if (image) {
-      const index = allImages.findIndex(img => img.slug === image.slug);
-      setCurrentImageIndex(index);
-      // Prevent background scrolling
+      if (image.slug) {
+        const index = allImages.findIndex(img => img.slug === image.slug);
+        if (index !== -1) {
+          setCurrentImageIndex(index);
+        }
+      }
       document.body.style.overflow = 'hidden';
     }
     return () => {
-      // Re-enable scrolling when popup closes
       document.body.style.overflow = 'unset';
     };
   }, [image]);
