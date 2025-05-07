@@ -84,56 +84,58 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
         ✕
       </button>
 
-      {/* Main Image */}
+      {/* Main Image Container */}
       <div 
-        className="w-full mx-auto mt-16 sm:mt-0 flex-1 flex items-center justify-center px-16 sm:px-24"
-        style={{ maxWidth: 'min(95vh, 64rem)' }}
+        className="w-full mx-auto mt-16 sm:mt-0 flex-1 flex flex-col items-center justify-center px-8 sm:px-12"
+        style={{ maxWidth: 'min(95vh, 99vw)' }}
         onClick={e => e.stopPropagation()}
       >
-        <button
-          onClick={handlePrevious}
-          className="absolute left-2 sm:left-10 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
-          aria-label="Previous image"
-        >
-          ‹
-        </button>
+        <div className="relative w-full flex-1 flex items-center justify-center">
+          <button
+            onClick={handlePrevious}
+            className="absolute -left-12 sm:-left-16 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
 
-        <div 
-          className="relative w-full mb-1 sm:mb-2" 
-          style={{ 
-            aspectRatio: '16/9',
-            minHeight: '50vh',
-            maxHeight: '70vh'
-          }}
-        >
-          <Image
-            src={allImages[currentImageIndex].path}
-            alt={allImages[currentImageIndex].title}
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 95vh, 64rem"
-            priority
-          />
+          <div 
+            className="relative w-full" 
+            style={{ 
+              aspectRatio: '16/9',
+              minHeight: '60vh',
+              maxHeight: '95vh'
+            }}
+          >
+            <Image
+              src={allImages[currentImageIndex].path}
+              alt={allImages[currentImageIndex].title}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 95vh, 99vw"
+              priority
+            />
+          </div>
+
+          <button
+            onClick={handleNext}
+            className="absolute -right-12 sm:-right-16 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
+            aria-label="Next image"
+          >
+            ›
+          </button>
         </div>
 
-        <button
-          onClick={handleNext}
-          className="absolute right-2 sm:right-10 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
-          aria-label="Next image"
-        >
-          ›
-        </button>
-      </div>
-
-      {/* Image Info */}
-      <div className="text-black text-center px-2 sm:px-4 mb-24">
-        <h2 className="text-lg sm:text-xl font-medium">{allImages[currentImageIndex].title}</h2>
-        <p className="text-xs sm:text-sm mt-1 text-gray-700">{allImages[currentImageIndex].caption}</p>
+        {/* Image Info - Now part of the main container */}
+        <div className="text-black text-center px-2 sm:px-4 mt-4 mb-24">
+          <h2 className="text-lg sm:text-xl font-medium">{allImages[currentImageIndex].title}</h2>
+          <p className="text-xs sm:text-sm mt-1 text-gray-700">{allImages[currentImageIndex].caption}</p>
+        </div>
       </div>
 
       {/* Thumbnail Gallery */}
-      <div className="w-full overflow-x-auto pb-4 px-4 mt-auto">
-        <div className="flex space-x-2 sm:space-x-4 min-w-max">
+      <div className="w-full overflow-x-auto pb-1 px-1 sm:px-2">
+        <div className="flex space-x-1 min-w-max">
           {allImages.map((img, index) => (
             <button
               key={img.slug}
@@ -141,7 +143,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
                 e.stopPropagation();
                 setCurrentImageIndex(index);
               }}
-              className={`relative w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 rounded-lg overflow-hidden ${
+              className={`relative w-14 h-14 sm:w-14 sm:h-14 flex-shrink-0 rounded-lg overflow-hidden ${
                 index === currentImageIndex ? 'ring-2 ring-black' : 'opacity-60 hover:opacity-100'
               }`}
             >
@@ -150,7 +152,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
                 alt={img.title}
                 fill
                 className="object-cover"
-                sizes="96px"
+                sizes="56px"
               />
             </button>
           ))}
