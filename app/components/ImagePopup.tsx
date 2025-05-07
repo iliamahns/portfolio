@@ -87,13 +87,13 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
       {/* Main Image Container */}
       <div 
         className="w-full mx-auto mt-16 sm:mt-0 flex-1 flex flex-col items-center justify-center px-8 sm:px-12"
-        style={{ maxWidth: 'min(95vh, 99vw)' }}
+        style={{ maxWidth: 'min(95vh, 90vw)' }}
         onClick={e => e.stopPropagation()}
       >
         <div className="relative w-full flex-1 flex items-center justify-center">
           <button
             onClick={handlePrevious}
-            className="absolute -left-12 sm:-left-16 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
+            className="absolute -left-12 sm:-left-24 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
             aria-label="Previous image"
           >
             ‹
@@ -112,14 +112,14 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
               alt={allImages[currentImageIndex].title}
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 95vh, 99vw"
+              sizes="(max-width: 768px) 90vw, 90vw"
               priority
             />
           </div>
 
           <button
             onClick={handleNext}
-            className="absolute -right-12 sm:-right-16 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
+            className="absolute -right-12 sm:-right-24 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
             aria-label="Next image"
           >
             ›
@@ -127,7 +127,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
         </div>
 
         {/* Image Info - Now part of the main container */}
-        <div className="text-black text-center px-2 sm:px-4 mt-4 mb-24">
+        <div className="text-black text-center px-2 sm:px-4 mt-4 mb-16 sm:mb-24">
           <h2 className="text-lg sm:text-xl font-medium">{allImages[currentImageIndex].title}</h2>
           <p className="text-xs sm:text-sm mt-1 text-gray-700">{allImages[currentImageIndex].caption}</p>
         </div>
@@ -143,8 +143,8 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
                 e.stopPropagation();
                 setCurrentImageIndex(index);
               }}
-              className={`relative w-14 h-14 sm:w-14 sm:h-14 flex-shrink-0 rounded-lg overflow-hidden ${
-                index === currentImageIndex ? 'ring-2 ring-black' : 'opacity-60 hover:opacity-100'
+              className={`relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 overflow-hidden ${
+                index === currentImageIndex ? 'border-2 border-[#D8E1C3]' : 'opacity-60 hover:opacity-100'
               }`}
             >
               <Image
@@ -152,7 +152,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
                 alt={img.title}
                 fill
                 className="object-cover"
-                sizes="56px"
+                sizes="(max-width: 768px) 48px, 56px"
               />
             </button>
           ))}
