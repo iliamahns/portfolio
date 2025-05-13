@@ -41,6 +41,16 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
 
+  const handlePrevious = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
+  };
+
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
@@ -58,10 +68,10 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      setCurrentImageIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
+      handleNext({ stopPropagation: () => {} } as React.MouseEvent);
     }
     if (isRightSwipe) {
-      setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
+      handlePrevious({ stopPropagation: () => {} } as React.MouseEvent);
     }
   };
 
@@ -89,16 +99,6 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
   }, [onClose]);
 
   if (!image) return null;
-
-  const handlePrevious = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
-  };
-
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
-  };
 
   return (
     <div 
