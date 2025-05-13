@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { ART_PAGE } from '../data/art-content';
 
@@ -34,7 +34,36 @@ function getAllImages() {
 
 export default function ImagePopup({ image, onClose }: ImagePopupProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const allImages = getAllImages();
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      handleNext(new MouseEvent('click') as any);
+    }
+    if (isRightSwipe) {
+      handlePrevious(new MouseEvent('click') as any);
+    }
+  };
 
   useEffect(() => {
     if (image) {
@@ -106,6 +135,9 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
               minHeight: '60vh',
               maxHeight: '95vh'
             }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <Image
               src={allImages[currentImageIndex].path}
