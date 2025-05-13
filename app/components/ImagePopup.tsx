@@ -93,7 +93,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
         <div className="relative w-full flex-1 flex items-center justify-center">
           <button
             onClick={handlePrevious}
-            className="absolute -left-12 sm:-left-24 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
+            className="absolute left-0 sm:-left-24 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
             aria-label="Previous image"
           >
             ‹
@@ -119,7 +119,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
 
           <button
             onClick={handleNext}
-            className="absolute -right-12 sm:-right-24 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
+            className="absolute right-0 sm:-right-24 text-black hover:opacity-70 z-10 text-3xl sm:text-4xl w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors"
             aria-label="Next image"
           >
             ›
