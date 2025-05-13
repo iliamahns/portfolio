@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ART_PAGE } from '../data/art-content';
 
@@ -58,10 +58,10 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      handleNext(new MouseEvent('click') as any);
+      handleNext({ stopPropagation: () => {} } as React.MouseEvent);
     }
     if (isRightSwipe) {
-      handlePrevious(new MouseEvent('click') as any);
+      handlePrevious({ stopPropagation: () => {} } as React.MouseEvent);
     }
   };
 
@@ -78,7 +78,7 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [image]);
+  }, [image, allImages]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
