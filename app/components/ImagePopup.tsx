@@ -58,10 +58,10 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      handleNext({ stopPropagation: () => {} } as React.MouseEvent);
+      setCurrentImageIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
     }
     if (isRightSwipe) {
-      handlePrevious({ stopPropagation: () => {} } as React.MouseEvent);
+      setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
     }
   };
 
