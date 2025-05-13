@@ -34,46 +34,7 @@ function getAllImages() {
 
 export default function ImagePopup({ image, onClose }: ImagePopupProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const allImages = getAllImages();
-
-  // Minimum swipe distance (in px)
-  const minSwipeDistance = 50;
-
-  const handlePrevious = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
-  };
-
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
-
-    if (isLeftSwipe) {
-      handleNext({ stopPropagation: () => {} } as React.MouseEvent);
-    }
-    if (isRightSwipe) {
-      handlePrevious({ stopPropagation: () => {} } as React.MouseEvent);
-    }
-  };
 
   useEffect(() => {
     if (image) {
@@ -99,6 +60,16 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
   }, [onClose]);
 
   if (!image) return null;
+
+  const handlePrevious = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
+  };
 
   return (
     <div 
@@ -135,9 +106,6 @@ export default function ImagePopup({ image, onClose }: ImagePopupProps) {
               minHeight: '60vh',
               maxHeight: '95vh'
             }}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
           >
             <Image
               src={allImages[currentImageIndex].path}
